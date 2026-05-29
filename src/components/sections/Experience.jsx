@@ -131,8 +131,10 @@ export default function Experience() {
 
           <ul className="space-y-2">
             <li className="text-body-sm flex gap-2">
-              <span className="text-black">—</span>
-              Presented the research paper <span className="font-semibold text-black">&ldquo;{PAPER_TITLE}&rdquo;</span> as an author at iCOMET 2026.
+              <span className="text-black flex-shrink-0">—</span>
+              <span>
+                Presented the research paper <span className="font-semibold text-black">&ldquo;{PAPER_TITLE}&rdquo;</span> as an author at iCOMET 2026.
+              </span>
             </li>
           </ul>
 
