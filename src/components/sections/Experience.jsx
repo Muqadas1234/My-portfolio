@@ -75,7 +75,7 @@ export default function Experience() {
         description="Hands-on experience in Python education and applied machine learning."
       />
 
-      <ul className="space-y-6">
+      <ul className="space-y-6 max-w-4xl mx-auto">
         {experience.map((job) => (
           <li key={`${job.company}-${job.title}`} className="card">
             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">

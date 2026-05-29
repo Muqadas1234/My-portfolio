@@ -11,7 +11,7 @@ export default function Skills() {
         description="Tools and frameworks I use to build intelligent, production-ready applications."
       />
 
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
         {skillGroups.map((group) => (
           <div
             key={group.category}

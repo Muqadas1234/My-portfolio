@@ -44,7 +44,7 @@ export default function Projects() {
     <SectionWrapper id="projects">
       <SectionHeader label="Projects" title="Featured Work" />
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
         {projects.map((project) => (
           <article key={project.id} className="card-hover flex flex-col gap-3">
             <div className="flex items-start justify-between gap-2">

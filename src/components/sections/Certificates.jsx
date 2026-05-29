@@ -24,11 +24,11 @@ export default function Certificates() {
         description="Click Read More to view description and skills."
       />
 
-      <div className="space-y-12">
+      <div className="space-y-12 max-w-5xl mx-auto">
         {Object.entries(groupedCertificates).map(([category, items]) => (
           <div key={category}>
             <h3 className="text-title-md mb-5">{category}</h3>
-            <ul className="grid sm:grid-cols-2 xl:grid-cols-3 gap-6 auto-rows-fr">
+            <ul className="grid sm:grid-cols-3 gap-4 auto-rows-fr">
               {items.map((cert) => (
                 <li key={cert.id} className="h-full">
                   <CertificateCard cert={cert} />
