@@ -13,7 +13,7 @@ export default function Education() {
       />
 
       <div className="flex flex-col md:flex-row gap-6 justify-center items-stretch max-w-4xl mx-auto">
-        <article className="card flex flex-col justify-between gap-6 max-w-md w-full border border-neutral-200">
+        <article className="card flex flex-col justify-between gap-4 max-w-md w-full border border-neutral-200">
           <div className="flex items-start gap-4">
             <div className="w-10 h-10 rounded border border-neutral-300 flex items-center justify-center flex-shrink-0">
               <HiAcademicCap size={20} className="text-black" />
@@ -42,7 +42,7 @@ export default function Education() {
           </div>
         </article>
 
-        <article className="card flex flex-col justify-between gap-6 max-w-md w-full border border-neutral-200">
+        <article className="card flex flex-col justify-between gap-4 max-w-md w-full border border-neutral-200">
           <div className="space-y-4">
             <div className="flex items-start gap-3">
               <img src="/certificates/harvard.jpg" alt="Harvard logo" className="w-10 h-10 object-contain rounded" />

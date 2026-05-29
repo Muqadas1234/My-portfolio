@@ -54,7 +54,7 @@ export default function CertificateCard({ cert }) {
           )}
         </button>
 
-        <div className="p-4 flex flex-col flex-1 gap-2">
+        <div className="p-3 flex flex-col flex-1 gap-1.5">
           <div className="min-h-[5.25rem]">
             <p className="text-label">{cert.issuer}</p>
             <h4 className="text-title-md mt-0.5 leading-snug line-clamp-2">{cert.title}</h4>
