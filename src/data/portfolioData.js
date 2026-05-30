@@ -93,7 +93,7 @@ export const journey = [
 ]
 
 export const navLinks = [
-  { id: 'home', label: 'Home' },
+  { id: 'home', label: 'About' },
   { id: 'education', label: 'Education' },
   { id: 'experience', label: 'Experience' },
   { id: 'skills', label: 'Skills' },
