@@ -40,11 +40,12 @@ export const personalInfo = {
   aboutHome: [
     'Fresh Computer Science graduate and Python Developer with expertise in Artificial Intelligence, Machine Learning, NLP, and Full-Stack Development. Skilled in building intelligent, scalable, and AI-driven applications using modern technologies and frameworks.',
     'Experienced in international hackathons, programming competitions, and collaborative projects, with strong problem-solving, communication, and analytical skills.',
+    'Actively seeking full-time software development, full-stack developer, and AI/ML engineering internships or job opportunities. Open to both remote and on-site/hybrid roles.',
   ],
   aboutShort:
-    'Fresh CS graduate skilled in AI, ML, NLP, and full-stack development — experienced in hackathons, collaborative projects, and delivering scalable applications.',
+    'Fresh CS graduate skilled in AI, ML, NLP, and full-stack development. Experienced in international hackathons and actively seeking remote or on-site job and internship opportunities as a Full-Stack Developer or AI/ML Engineer.',
   aboutLong:
-    'I am a fresh Computer Science graduate with expertise in AI, Machine Learning, NLP, and full-stack development. I have participated in international hackathons, programming competitions, and collaborative team projects, building intelligent and scalable solutions using Python and modern web frameworks.',
+    'I am a fresh Computer Science graduate with expertise in AI, Machine Learning, NLP, and full-stack development. Having built robust platforms and competed in global hackathons, I am actively seeking full-time software engineering, full-stack development, or AI/ML internships and job opportunities — available for both remote and on-site/hybrid positions.',
   resumeUrl: '/Muqadas Akram Resume.pdf',
 }
 
@@ -93,8 +94,8 @@ export const journey = [
 
 export const navLinks = [
   { id: 'home', label: 'Home' },
-  { id: 'experience', label: 'Experience' },
   { id: 'education', label: 'Education' },
+  { id: 'experience', label: 'Experience' },
   { id: 'skills', label: 'Skills' },
   { id: 'projects', label: 'Projects' },
   { id: 'certificates', label: 'Certificates' },
