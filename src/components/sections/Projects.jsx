@@ -3,6 +3,7 @@ import { FaGithub, FaExternalLinkAlt, FaYoutube, FaPlay, FaGlobe } from 'react-i
 import SectionWrapper from '../ui/SectionWrapper'
 import SectionHeader from '../ui/SectionHeader'
 import MediaLightbox from '../ui/MediaLightbox'
+import ProjectDetailModal from '../ui/ProjectDetailModal'
 import { projects } from '../../data/portfolioData'
 
 function StackRow({ label, items }) {
@@ -40,6 +41,8 @@ function ProjectDemoButton({ videoId, title }) {
 }
 
 export default function Projects() {
+  const [selectedProject, setSelectedProject] = useState(null)
+
   return (
     <SectionWrapper id="projects">
       <SectionHeader label="Projects" title="Featured Work" />
@@ -49,17 +52,32 @@ export default function Projects() {
           <article key={project.id} className="card-hover flex flex-col gap-3">
             <div className="flex items-start justify-between gap-2">
               <h3 className="text-title-md leading-snug">{project.title}</h3>
-              {project.badge && (
-                <span className="flex-shrink-0 rounded border border-black px-2 py-0.5 text-[10px] font-semibold uppercase">
-                  FYP
-                </span>
-              )}
+              <div className="flex items-center gap-2 flex-shrink-0">
+                {project.badge && (
+                  <span className="flex-shrink-0 rounded border border-black px-2 py-0.5 text-[10px] font-semibold uppercase">
+                    FYP
+                  </span>
+                )}
+                <button
+                  type="button"
+                  onClick={() => setSelectedProject(project)}
+                  className="rounded bg-black px-2.5 py-1 text-xs font-semibold text-white hover:bg-neutral-800 transition-colors shadow-sm cursor-pointer"
+                >
+                  Details
+                </button>
+              </div>
             </div>
 
             <div className="space-y-1.5">
               <StackRow label="Frontend" items={project.frontend} />
               <StackRow label="Backend" items={project.backend} />
             </div>
+
+            {project.note && (
+              <p className="text-[11px] italic text-neutral-500 leading-relaxed mt-0.5">
+                {project.note}
+              </p>
+            )}
 
             <div className="mt-auto grid grid-rows-3 gap-2">
               {project.demo ? (
@@ -118,6 +136,12 @@ export default function Projects() {
           </article>
         ))}
       </div>
+
+      <ProjectDetailModal
+        project={selectedProject}
+        open={!!selectedProject}
+        onClose={() => setSelectedProject(null)}
+      />
     </SectionWrapper>
   )
 }
