@@ -27,7 +27,7 @@ export default function ProjectDetailModal({ project, open, onClose }) {
       // Render general section header if it ends with a colon (e.g. "Key Features:")
       if (trimmed.endsWith(':')) {
         return (
-          <h5 key={idx} className="text-xs font-bold uppercase tracking-wider text-neutral-800 mt-3 mb-1">
+          <h5 key={idx} className="text-xs font-semibold uppercase tracking-widest text-neutral-400 mt-5 mb-2">
             {trimmed}
           </h5>
         );
@@ -40,16 +40,38 @@ export default function ProjectDetailModal({ project, open, onClose }) {
         if (colonIndex !== -1) {
           const boldText = trimmed.substring(0, colonIndex + 1);
           const normalText = trimmed.substring(colonIndex + 1);
+          
+          // Split Roman numeral and Title
+          const firstDot = boldText.indexOf('.');
+          const roman = firstDot !== -1 ? boldText.substring(0, firstDot).trim() : '•';
+          const title = firstDot !== -1 ? boldText.substring(firstDot + 1).trim() : boldText;
+
           return (
-            <div key={idx} className="text-[13px] leading-relaxed text-neutral-600 mt-2">
-              <span className="font-bold text-neutral-800">{boldText}</span>
-              <span>{normalText}</span>
+            <div key={idx} className="flex gap-3 rounded-xl border border-neutral-200 bg-neutral-50/50 p-4 transition-colors hover:border-neutral-450 text-left my-2">
+              {/* Roman circular badge */}
+              <span className="flex-shrink-0 inline-flex items-center justify-center h-6 w-6 rounded-full bg-black text-white text-[10px] font-bold mt-0.5">
+                {roman}
+              </span>
+              <div className="flex-1">
+                <span className="font-bold text-black text-sm block">{title}</span>
+                <span className="text-neutral-600 text-xs leading-relaxed mt-1 block">{normalText}</span>
+              </div>
             </div>
           );
         } else {
+          // Roman numeral without colon
+          const firstDot = trimmed.indexOf('.');
+          const roman = firstDot !== -1 ? trimmed.substring(0, firstDot).trim() : '•';
+          const title = firstDot !== -1 ? trimmed.substring(firstDot + 1).trim() : trimmed;
+
           return (
-            <div key={idx} className="text-[13px] font-bold text-neutral-800 leading-relaxed mt-2.5 mb-0.5">
-              {trimmed}
+            <div key={idx} className="flex gap-3 rounded-xl border border-neutral-200 bg-neutral-50/50 p-4 transition-colors hover:border-neutral-400 text-left my-2">
+              <span className="flex-shrink-0 inline-flex items-center justify-center h-6 w-6 rounded-full bg-black text-white text-[10px] font-bold mt-0.5">
+                {roman}
+              </span>
+              <div className="flex-1">
+                <span className="font-bold text-black text-sm block">{title}</span>
+              </div>
             </div>
           );
         }
@@ -58,8 +80,8 @@ export default function ProjectDetailModal({ project, open, onClose }) {
       // Format sub-bullets (lines starting with - or •)
       if (trimmed.startsWith('-') || trimmed.startsWith('•')) {
         return (
-          <div key={idx} className="pl-4 -indent-4 text-[13px] leading-relaxed text-neutral-600">
-            <span className="font-bold text-neutral-800">• </span>
+          <div key={idx} className="pl-8 -indent-4 text-xs leading-relaxed text-neutral-600 text-left my-1">
+            <span className="font-bold text-black mr-2">•</span>
             <span>{trimmed.substring(1).trim()}</span>
           </div>
         );
@@ -72,7 +94,7 @@ export default function ProjectDetailModal({ project, open, onClose }) {
 
       // Default line paragraph
       return (
-        <p key={idx} className="text-[13px] leading-relaxed text-neutral-600">
+        <p key={idx} className="text-xs sm:text-sm leading-relaxed text-neutral-650 text-left">
           {trimmed}
         </p>
       );
@@ -81,55 +103,66 @@ export default function ProjectDetailModal({ project, open, onClose }) {
 
   return (
     <div
-      className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm transition-opacity duration-300"
+      className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm transition-opacity duration-300"
       role="dialog"
       aria-modal="true"
       aria-label={project.title}
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-2xl bg-white rounded-xl shadow-2xl p-5 sm:p-7 flex flex-col gap-4 border border-neutral-100 animate-in fade-in zoom-in-95 duration-200 overflow-y-auto max-h-[90vh]"
+        className="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl p-6 sm:p-8 flex flex-col gap-5 border border-neutral-200 animate-in fade-in zoom-in-95 duration-200 overflow-y-auto max-h-[85vh] no-scrollbar"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
         <button
           type="button"
           onClick={onClose}
-          className="absolute top-4 right-4 rounded-full p-1 text-neutral-400 hover:text-black hover:bg-neutral-100 transition-colors z-10"
+          className="absolute top-4 right-4 text-neutral-400 hover:text-black transition-colors z-10 p-1 rounded-full hover:bg-neutral-100"
           aria-label="Close details"
         >
-          <HiX size={18} />
+          <HiX size={20} />
         </button>
 
         {/* Header */}
-        <div className="space-y-0.5 pr-6">
+        <div className="space-y-1.5 pr-8 text-left">
           {project.badge && (
-            <span className="inline-block rounded bg-neutral-100 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-neutral-700">
+            <span className="inline-block rounded border border-black px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-black">
               {project.badge}
             </span>
           )}
-          <h3 className="text-lg font-bold text-black leading-snug">{project.title}</h3>
+          <h3 className="text-2xl font-bold text-black tracking-tight leading-snug">
+            {project.title}
+          </h3>
         </div>
 
         {/* Body Content */}
-        <div className="space-y-2 border-t border-neutral-100 pt-3">
-          <h4 className="text-[11px] font-bold uppercase tracking-widest text-neutral-400">Project Overview</h4>
-          <div className="space-y-1.5 pr-1">
+        <div className="space-y-3 border-t border-neutral-200 pt-4">
+          <h4 className="text-xs font-semibold uppercase tracking-widest text-neutral-400 text-left">
+            Project Overview
+          </h4>
+          <div className="space-y-2 pr-1">
             {renderFormattedDescription(project.description)}
           </div>
         </div>
 
         {/* Tech Stack */}
-        <div className="space-y-2 border-t border-neutral-100 pt-3">
-          <h4 className="text-[11px] font-bold uppercase tracking-widest text-neutral-400">Technology Stack</h4>
+        <div className="space-y-3 border-t border-neutral-200 pt-4 text-left">
+          <h4 className="text-xs font-semibold uppercase tracking-widest text-neutral-400">
+            Technology Stack
+          </h4>
           
-          <div className="grid sm:grid-cols-2 gap-2.5 text-xs">
+          <div className="grid sm:grid-cols-2 gap-4 text-xs">
             {project.frontend && project.frontend.length > 0 && (
-              <div className="flex flex-col gap-1">
-                <span className="font-bold text-neutral-800 text-[10px] uppercase tracking-wider">Frontend</span>
-                <div className="flex flex-wrap gap-1">
+              <div className="flex flex-col gap-1.5">
+                <span className="text-xs font-semibold text-neutral-500 uppercase tracking-wider">
+                  Frontend
+                </span>
+                <div className="flex flex-wrap gap-1.5">
                   {project.frontend.map((tech) => (
-                    <span key={tech} className="rounded bg-neutral-50 border border-neutral-200 px-2 py-0.5 text-[10px] text-neutral-600 font-medium">
+                    <span 
+                      key={tech} 
+                      className="rounded border border-neutral-300 bg-neutral-50 px-2.5 py-1 text-xs text-neutral-800 transition-colors hover:border-black"
+                    >
                       {tech}
                     </span>
                   ))}
@@ -138,11 +171,16 @@ export default function ProjectDetailModal({ project, open, onClose }) {
             )}
 
             {project.backend && project.backend.length > 0 && (
-              <div className="flex flex-col gap-1">
-                <span className="font-bold text-neutral-800 text-[10px] uppercase tracking-wider">Backend & AI</span>
-                <div className="flex flex-wrap gap-1">
+              <div className="flex flex-col gap-1.5">
+                <span className="text-xs font-semibold text-neutral-500 uppercase tracking-wider">
+                  Backend & AI
+                </span>
+                <div className="flex flex-wrap gap-1.5">
                   {project.backend.map((tech) => (
-                    <span key={tech} className="rounded bg-neutral-50 border border-neutral-200 px-2 py-0.5 text-[10px] text-neutral-600 font-medium">
+                    <span 
+                      key={tech} 
+                      className="rounded border border-neutral-300 bg-neutral-50 px-2.5 py-1 text-xs text-neutral-800 transition-colors hover:border-black"
+                    >
                       {tech}
                     </span>
                   ))}
@@ -153,17 +191,17 @@ export default function ProjectDetailModal({ project, open, onClose }) {
         </div>
 
         {/* Links / Action Buttons */}
-        <div className="flex gap-2 border-t border-neutral-100 pt-3 mt-1">
+        <div className="flex flex-col sm:flex-row gap-3 border-t border-neutral-200 pt-4 mt-1">
           {project.demo && (
             <a
               href={project.demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 inline-flex items-center justify-center gap-1.5 rounded bg-black py-2 text-xs font-semibold text-white hover:bg-neutral-800 transition-colors shadow-sm"
+              className="btn-primary flex-1 py-2 text-sm inline-flex items-center justify-center gap-2"
             >
-              <FaGlobe className="text-[10px]" />
-              Live App
-              <FaExternalLinkAlt className="text-[8px]" />
+              <FaGlobe className="text-xs" />
+              Open Live App
+              <FaExternalLinkAlt className="text-[10px]" />
             </a>
           )}
 
@@ -172,11 +210,11 @@ export default function ProjectDetailModal({ project, open, onClose }) {
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 inline-flex items-center justify-center gap-1.5 rounded border border-black py-2 text-xs font-semibold text-black hover:bg-neutral-50 transition-colors"
+              className="btn-secondary flex-1 py-2 text-sm inline-flex items-center justify-center gap-2"
             >
-              <FaGithub />
+              <FaGithub className="text-xs" />
               GitHub
-              <FaExternalLinkAlt className="text-[8px]" />
+              <FaExternalLinkAlt className="text-[10px]" />
             </a>
           )}
 
@@ -185,11 +223,11 @@ export default function ProjectDetailModal({ project, open, onClose }) {
               href={`https://www.youtube.com/watch?v=${project.youtube}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 inline-flex items-center justify-center gap-1.5 rounded border border-black py-2 text-xs font-semibold text-black hover:bg-neutral-50 transition-colors"
+              className="inline-flex items-center justify-center gap-2 rounded-md border border-neutral-300 bg-white px-6 py-2 text-sm font-semibold text-neutral-700 hover:border-black hover:text-black flex-1 transition-colors"
             >
-              <FaYoutube className="text-red-600 text-[11px]" />
-              Demo
-              <FaExternalLinkAlt className="text-[8px]" />
+              <FaYoutube className="text-red-600 text-xs" />
+              Video Demo
+              <FaExternalLinkAlt className="text-[10px]" />
             </a>
           )}
         </div>

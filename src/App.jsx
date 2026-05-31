@@ -6,6 +6,7 @@ import Education from './components/sections/Education'
 import Skills from './components/sections/Skills'
 import Projects from './components/sections/Projects'
 import Certificates from './components/sections/Certificates'
+import Workflow from './components/sections/Workflow'
 
 
 export default function App() {
@@ -19,7 +20,7 @@ export default function App() {
         <Skills />
         <Projects />
         <Certificates />
-
+        <Workflow />
       </main>
       <Footer />
     </>

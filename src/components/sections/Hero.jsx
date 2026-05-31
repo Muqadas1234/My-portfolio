@@ -55,7 +55,7 @@ export default function Hero() {
             <span className="animate-pulse ml-1 text-neutral-400 font-light" style={{ animationDuration: '0.8s' }}>|</span>
           </h1>
           <p className="mt-4 text-title-sm font-semibold text-center text-black">
-            AI/ML Engineer | Full Stack Developer | Conversational AI Agents | Python Developer | Hackathons Participant
+            {personalInfo.title}
           </p>
 
           <div className="mt-8 space-y-4 max-w-2xl">

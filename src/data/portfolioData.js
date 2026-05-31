@@ -30,7 +30,7 @@ export const personalInfo = {
   name: 'Muqadas Akram',
   role: 'Fresh Computer Science Graduate',
   title: 'Fresh Computer Science Graduate | Python Developer | Full Stack Developer | AI/ML Engineer | NLP',
-  subtitle: 'AI · Machine Learning · NLP · Full Stack Development',
+  subtitle: 'AI Engineer · Full-Stack Developer · Machine Learning · NLP',
   email: 'muqadasakram.13@gmail.com',
   phone: '+92 319 828 8490',
   github: 'https://github.com/Muqadas1234',
@@ -99,6 +99,8 @@ export const navLinks = [
   { id: 'skills', label: 'Skills' },
   { id: 'projects', label: 'Projects' },
   { id: 'certificates', label: 'Certificates' },
+  { id: 'workflow', label: 'Workflow' },
+  { id: 'connect', label: 'Connect' },
 ]
 
 export const certificateGroups = [
@@ -500,8 +502,8 @@ VIII. Flexible Deployment: Works seamlessly with a local embedded Qdrant databas
   },
   {
     id: 6,
-    title: 'AI Hospital Appointment Agent',
-    description: `AI Hospital Appointment Agent is a production-ready, voice-driven scheduling platform designed for clinics and hospitals. It allows patients to book, reschedule, or cancel appointments through natural conversation with an AI assistant, while healthcare staff manage slots, fees, and logs through a secure administrative dashboard.
+    title: 'AI Receptionist',
+    description: `AI Receptionist is a production-ready, voice-driven scheduling platform designed for clinics and hospitals. It allows patients to book, reschedule, or cancel appointments through natural conversation with an AI assistant, while healthcare staff manage slots, fees, and logs through a secure administrative dashboard.
 
 Key Features:
 I. Voice Assistant: Conversational, natural-language appointment booking, rescheduling, and cancellation with instant confirmation powered by Vapi.
