@@ -337,7 +337,7 @@ export const experience = [
 export const education = {
   degree: 'Bachelor of Science in Computer Science',
   institution: 'Sukkur IBA University',
-  cgpa: '3.31',
+  cgpa: '3.39',
   duration: '2022 – 2026',
   programTitle: 'Aspire Leaders Program',
   programSubtitle: 'AI-Integrated Leadership Program 2025 • Applied AI and Organizational Leadership',
