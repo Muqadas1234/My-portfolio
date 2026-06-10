@@ -121,7 +121,7 @@ export default function Experience() {
                 <HiAcademicCap size={18} className="text-black" />
               </div>
               <div>
-                <h3 className="text-title-lg">Conference Paper Presenter at iCOMET 2026</h3>
+                <h3 className="text-title-lg">Conference Paper Author &amp; Presenter at iCOMET 2026</h3>
                 <p className="text-body-sm font-semibold text-black mt-0.5">
                   5th IEEE International Conference on Computing, Mathematics &amp; Engineering Technologies
                 </p>
