@@ -3,6 +3,7 @@ import { HiBriefcase, HiAcademicCap, HiX } from 'react-icons/hi'
 import SectionWrapper from '../ui/SectionWrapper'
 import SectionHeader from '../ui/SectionHeader'
 import JourneyLinks from '../ui/JourneyLinks'
+import MediaLightbox from '../ui/MediaLightbox'
 import { experience } from '../../data/portfolioData'
 
 const PAPER_TITLE = 'Link Prediction in Bitcoin Transaction Graphs Using Graph Neural Networks'
@@ -66,6 +67,7 @@ function AbstractModal({ onClose }) {
 
 export default function Experience() {
   const [showAbstract, setShowAbstract] = useState(false)
+  const [showCert, setShowCert] = useState(false)
 
   return (
     <SectionWrapper id="experience" className="section-alt">
@@ -148,14 +150,13 @@ export default function Experience() {
               📄 Abstract
             </button>
 
-            {/* Certificate button — disabled */}
+            {/* Certificate button */}
             <button
               type="button"
-              disabled
-              className="inline-flex items-center gap-2 rounded-md border border-neutral-300 bg-neutral-100 px-4 py-2 text-sm font-semibold text-neutral-400 cursor-not-allowed"
-              title="Certificate coming soon"
+              onClick={() => setShowCert(true)}
+              className="inline-flex items-center gap-2 rounded-md border-2 border-black bg-white px-4 py-2 text-sm font-semibold text-black hover:bg-neutral-100 transition-colors"
             >
-              🎓 Certificate (Coming Soon)
+              🎓 Certificate
             </button>
           </div>
         </li>
@@ -163,6 +164,14 @@ export default function Experience() {
 
       {/* Abstract modal */}
       {showAbstract && <AbstractModal onClose={() => setShowAbstract(false)} />}
+
+      <MediaLightbox
+        open={showCert}
+        onClose={() => setShowCert(false)}
+        type="image"
+        src="/certificates/icomet-certificate.png"
+        title="iCOMET 2026 Certificate"
+      />
     </SectionWrapper>
   )
 }
