@@ -442,6 +442,24 @@ V. Secure Admin Dashboard: Role-based access for managing users, content, and do
   },
   {
     id: 3,
+    title: 'AI Receptionist',
+    description: `AI Receptionist is a production-ready, voice-driven scheduling platform designed for clinics and hospitals. It allows patients to book, reschedule, or cancel appointments through natural conversation with an AI assistant, while healthcare staff manage slots, fees, and logs through a secure administrative dashboard.
+
+Key Features:
+I. Voice Assistant: Conversational, natural-language appointment booking, rescheduling, and cancellation with instant confirmation powered by Vapi.
+II. Provider Dashboard: Administrative management of medical providers, time slots, consultation fees in PKR, and patient FAQs.
+III. Calendar Integration: Automated real-time Google Calendar synchronization to manage and block booked appointment slots.
+IV. Automated Reminders: Instant patient alerts and appointment reminders sent via Twilio SMS and WhatsApp messaging.
+V. Secure Web Portal: Complete admin interface to view appointment histories, notification delivery status, and system audit logs.
+VI. JWT-Protected API: Highly secure backend routes protected by JSON Web Tokens (JWT) coupled with tool endpoints for the voice stack.`,
+    note: 'Videos demonstrating booking, cancellation, and rescheduling workflows are available in the playlist.',
+    github: 'https://github.com/Muqadas1234/AI-powered-hospital-appointment-agent',
+    youtube: 'kn9bAX83H00',
+    frontend: ['React', 'Vite'],
+    backend: ['Python', 'FastAPI', 'PostgreSQL', 'Vapi', 'Google Calendar API', 'Twilio', 'SQLAlchemy', 'Alembic'],
+  },
+  {
+    id: 4,
     title: 'Lost & Found AI System',
     description: `This is a comprehensive Lost and Found Management System that uses AI and Natural Language Processing (NLP) to automatically match lost and found items. Utilizing semantic understanding, this platform connects items even when descriptions use different words but convey the same meaning.
 
@@ -459,7 +477,7 @@ VII. Responsive Design: Mobile-friendly, modern interface that works seamlessly 
     backend: ['Flask', 'SQLite', 'Sentence Transformers', 'Google OAuth', 'Gmail SMTP'],
   },
   {
-    id: 4,
+    id: 5,
     title: 'Multilingual AI Health Assistant',
     description: `A sophisticated, production-ready AI-powered health assistant that provides intelligent medical diagnosis, treatment suggestions, and comprehensive health guidance in multiple languages. It features a modern WhatsApp-style chat interface, advanced AI diagnostics, medicine database, PDF report generation, and text-to-speech capabilities.
 
@@ -480,7 +498,7 @@ X. State Persistence: Seamlessly maintains conversation histories and modal stat
     backend: ['Flask', 'Groq API', 'gTTS', 'ReportLab'],
   },
   {
-    id: 5,
+    id: 6,
     title: 'AI Travel Planner',
     description: `AI Travel Planner is an intelligent, AI-powered web app designed to simplify trip planning by creating personalized itineraries, smart budget breakdowns, and destination suggestions. Powered by LLaMA via Groq and integrated with Tavily and Booking.com APIs, it features a modern glassmorphism interface, graph-based traveler profiling, and secure authentication.
 
@@ -498,7 +516,7 @@ VII. Notification Engine: Professional HTML email templates with secure Gmail SM
     backend: ['Flask', 'SQLite', 'Groq API', 'NetworkX', 'Tavily API', 'Booking.com API', 'Gmail SMTP'],
   },
   {
-    id: 6,
+    id: 7,
     title: 'AI Compliance Decision System',
     description: `AI Compliance Decision System is a secure, automated policy validation platform designed to solve manual review inconsistencies. The system ingests policy regulations, retrieves relevant rules using a semantic vector search, and generates automated decisions backed by a highly traceable audit trail.
 
@@ -515,24 +533,6 @@ VIII. Flexible Deployment: Works seamlessly with a local embedded Qdrant databas
     youtube: 'a2KrbP1mzcw',
     frontend: ['Streamlit'],
     backend: ['Python', 'Qdrant', 'LlamaIndex', 'Docker'],
-  },
-  {
-    id: 7,
-    title: 'AI Receptionist',
-    description: `AI Receptionist is a production-ready, voice-driven scheduling platform designed for clinics and hospitals. It allows patients to book, reschedule, or cancel appointments through natural conversation with an AI assistant, while healthcare staff manage slots, fees, and logs through a secure administrative dashboard.
-
-Key Features:
-I. Voice Assistant: Conversational, natural-language appointment booking, rescheduling, and cancellation with instant confirmation powered by Vapi.
-II. Provider Dashboard: Administrative management of medical providers, time slots, consultation fees in PKR, and patient FAQs.
-III. Calendar Integration: Automated real-time Google Calendar synchronization to manage and block booked appointment slots.
-IV. Automated Reminders: Instant patient alerts and appointment reminders sent via Twilio SMS and WhatsApp messaging.
-V. Secure Web Portal: Complete admin interface to view appointment histories, notification delivery status, and system audit logs.
-VI. JWT-Protected API: Highly secure backend routes protected by JSON Web Tokens (JWT) coupled with tool endpoints for the voice stack.`,
-    note: 'Videos demonstrating booking, cancellation, and rescheduling workflows are available in the playlist.',
-    github: 'https://github.com/Muqadas1234/AI-powered-hospital-appointment-agent',
-    youtube: 'kn9bAX83H00',
-    frontend: ['React', 'Vite'],
-    backend: ['Python', 'FastAPI', 'PostgreSQL', 'Vapi', 'Google Calendar API', 'Twilio', 'SQLAlchemy', 'Alembic'],
   },
 ]
 
