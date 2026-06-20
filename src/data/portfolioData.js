@@ -438,7 +438,7 @@ V. Secure Admin Dashboard: Role-based access for managing users, content, and do
     github: 'https://github.com/Muqadas1234/durood-shareef-tracker',
     demo: 'https://durood-shareef-tracker.vercel.app',
     frontend: ['Next.js 14', 'React', 'Tailwind CSS', 'React Native', 'Expo'],
-    backend: ['Node.js', 'Next.js API Routes', 'PostgreSQL (Neon)', 'JWT Auth', 'bcrypt', 'Vercel'],
+    backend: ['Node.js', 'Next.js API Routes', 'PostgreSQL (Neon)', 'JWT Auth', 'Vercel'],
   },
   {
     id: 3,
