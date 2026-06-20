@@ -426,6 +426,22 @@ VIII. Progress Dashboard: Interactive history tracking for practice sessions, sc
   },
   {
     id: 2,
+    title: 'Global Durood Shareef Tracker',
+    description: `A full-stack Web and Mobile application designed to foster a spiritual community. It empowers users to track daily devotions, stay updated on events, and browse media, all managed via a secure admin dashboard.
+
+Key Features:
+I. Dual-Platform: Synchronized experience across Web (Next.js) and Mobile (React Native).
+II. Trilingual Support: Dynamic localization for English, Urdu, and Sindhi.
+III. Activity Tracking: Users can log and visualize their daily Durood recitations.
+IV. Event & Media Management: Admins can manage events, track attendance, and curate a filterable photo gallery with an interactive lightbox.
+V. Secure Admin Dashboard: Role-based access for managing users, content, and downloadable PDF reports.`,
+    github: 'https://github.com/Muqadas1234/durood-shareef-tracker',
+    demo: 'https://durood-shareef-tracker.vercel.app',
+    frontend: ['Next.js 14', 'React', 'Tailwind CSS', 'React Native', 'Expo'],
+    backend: ['Node.js', 'Next.js API Routes', 'PostgreSQL (Neon)', 'JWT Auth', 'bcrypt', 'Vercel'],
+  },
+  {
+    id: 3,
     title: 'Lost & Found AI System',
     description: `This is a comprehensive Lost and Found Management System that uses AI and Natural Language Processing (NLP) to automatically match lost and found items. Utilizing semantic understanding, this platform connects items even when descriptions use different words but convey the same meaning.
 
@@ -443,7 +459,7 @@ VII. Responsive Design: Mobile-friendly, modern interface that works seamlessly 
     backend: ['Flask', 'SQLite', 'Sentence Transformers', 'Google OAuth', 'Gmail SMTP'],
   },
   {
-    id: 3,
+    id: 4,
     title: 'Multilingual AI Health Assistant',
     description: `A sophisticated, production-ready AI-powered health assistant that provides intelligent medical diagnosis, treatment suggestions, and comprehensive health guidance in multiple languages. It features a modern WhatsApp-style chat interface, advanced AI diagnostics, medicine database, PDF report generation, and text-to-speech capabilities.
 
@@ -464,7 +480,7 @@ X. State Persistence: Seamlessly maintains conversation histories and modal stat
     backend: ['Flask', 'Groq API', 'gTTS', 'ReportLab'],
   },
   {
-    id: 4,
+    id: 5,
     title: 'AI Travel Planner',
     description: `AI Travel Planner is an intelligent, AI-powered web app designed to simplify trip planning by creating personalized itineraries, smart budget breakdowns, and destination suggestions. Powered by LLaMA via Groq and integrated with Tavily and Booking.com APIs, it features a modern glassmorphism interface, graph-based traveler profiling, and secure authentication.
 
@@ -482,7 +498,7 @@ VII. Notification Engine: Professional HTML email templates with secure Gmail SM
     backend: ['Flask', 'SQLite', 'Groq API', 'NetworkX', 'Tavily API', 'Booking.com API', 'Gmail SMTP'],
   },
   {
-    id: 5,
+    id: 6,
     title: 'AI Compliance Decision System',
     description: `AI Compliance Decision System is a secure, automated policy validation platform designed to solve manual review inconsistencies. The system ingests policy regulations, retrieves relevant rules using a semantic vector search, and generates automated decisions backed by a highly traceable audit trail.
 
@@ -501,7 +517,7 @@ VIII. Flexible Deployment: Works seamlessly with a local embedded Qdrant databas
     backend: ['Python', 'Qdrant', 'LlamaIndex', 'Docker'],
   },
   {
-    id: 6,
+    id: 7,
     title: 'AI Receptionist',
     description: `AI Receptionist is a production-ready, voice-driven scheduling platform designed for clinics and hospitals. It allows patients to book, reschedule, or cancel appointments through natural conversation with an AI assistant, while healthcare staff manage slots, fees, and logs through a secure administrative dashboard.
 
@@ -517,22 +533,6 @@ VI. JWT-Protected API: Highly secure backend routes protected by JSON Web Tokens
     youtube: 'kn9bAX83H00',
     frontend: ['React', 'Vite'],
     backend: ['Python', 'FastAPI', 'PostgreSQL', 'Vapi', 'Google Calendar API', 'Twilio', 'SQLAlchemy', 'Alembic'],
-  },
-  {
-    id: 7,
-    title: 'Durood-o-Salam Tracker & Community Platform',
-    description: `A full-stack Web and Mobile application designed to foster a spiritual community. It empowers users to track daily devotions, stay updated on events, and browse media, all managed via a secure admin dashboard.
-
-Key Features:
-I. Dual-Platform: Synchronized experience across Web (Next.js) and Mobile (React Native).
-II. Trilingual Support: Dynamic localization for English, Urdu, and Sindhi.
-III. Activity Tracking: Users can log and visualize their daily Durood recitations.
-IV. Event & Media Management: Admins can manage events, track attendance, and curate a filterable photo gallery with an interactive lightbox.
-V. Secure Admin Dashboard: Role-based access for managing users, content, and downloadable PDF reports.`,
-    github: 'https://github.com/Muqadas1234/durood-shareef-tracker',
-    demo: 'https://durood-shareef-tracker.vercel.app',
-    frontend: ['Next.js 14', 'React', 'Tailwind CSS', 'React Native', 'Expo'],
-    backend: ['Node.js', 'Next.js API Routes', 'PostgreSQL (Neon)', 'JWT Auth', 'bcrypt', 'Vercel'],
   },
 ]
 
