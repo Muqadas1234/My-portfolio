@@ -29,8 +29,8 @@ import { TbBrandCpp } from 'react-icons/tb'
 export const personalInfo = {
   name: 'Muqadas Akram',
   role: 'Fresh Computer Science Graduate',
-  title: 'Fresh Computer Science Graduate | Python Developer | Full Stack Developer | AI/ML Engineer | NLP',
-  subtitle: 'AI Engineer · Full-Stack Developer · Machine Learning · NLP',
+  title: 'Fresh Computer Science Graduate | Python Developer | Full Stack Developer | AI/ML Engineer',
+  subtitle: 'AI Engineer · Full-Stack Developer · Machine Learning',
   email: 'muqadasakram.13@gmail.com',
   phone: '+92 319 828 8490',
   github: 'https://github.com/Muqadas1234',
