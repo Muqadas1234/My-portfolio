@@ -68,6 +68,7 @@ function AbstractModal({ onClose }) {
 export default function Experience() {
   const [showAbstract, setShowAbstract] = useState(false)
   const [showCert, setShowCert] = useState(false)
+  const [showAuthorship, setShowAuthorship] = useState(false)
 
   return (
     <SectionWrapper id="experience" className="section-alt">
@@ -150,13 +151,21 @@ export default function Experience() {
               📄 Abstract
             </button>
 
-            {/* Certificate button */}
+            {/* Certificate buttons */}
             <button
               type="button"
               onClick={() => setShowCert(true)}
               className="inline-flex items-center gap-2 rounded-md border-2 border-black bg-white px-4 py-2 text-sm font-semibold text-black hover:bg-neutral-100 transition-colors"
             >
-              🎓 Certificate
+              🎓 Presenter Certificate
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setShowAuthorship(true)}
+              className="inline-flex items-center gap-2 rounded-md border-2 border-black bg-white px-4 py-2 text-sm font-semibold text-black hover:bg-neutral-100 transition-colors"
+            >
+              📜 Authorship Certificate
             </button>
           </div>
         </li>
@@ -170,7 +179,15 @@ export default function Experience() {
         onClose={() => setShowCert(false)}
         type="image"
         src="/certificates/icomet-certificate.png"
-        title="iCOMET 2026 Certificate"
+        title="iCOMET 2026 Presenter Certificate"
+      />
+
+      <MediaLightbox
+        open={showAuthorship}
+        onClose={() => setShowAuthorship(false)}
+        type="image"
+        src="/certificates/authorship-certificate.png"
+        title="iCOMET 2026 Authorship Certificate"
       />
     </SectionWrapper>
   )
