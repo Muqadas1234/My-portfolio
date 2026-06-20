@@ -518,5 +518,21 @@ VI. JWT-Protected API: Highly secure backend routes protected by JSON Web Tokens
     frontend: ['React', 'Vite'],
     backend: ['Python', 'FastAPI', 'PostgreSQL', 'Vapi', 'Google Calendar API', 'Twilio', 'SQLAlchemy', 'Alembic'],
   },
+  {
+    id: 7,
+    title: 'Durood-o-Salam Tracker & Community Platform',
+    description: `A full-stack Web and Mobile application designed to foster a spiritual community. It empowers users to track daily devotions, stay updated on events, and browse media, all managed via a secure admin dashboard.
+
+Key Features:
+I. Dual-Platform: Synchronized experience across Web (Next.js) and Mobile (React Native).
+II. Trilingual Support: Dynamic localization for English, Urdu, and Sindhi.
+III. Activity Tracking: Users can log and visualize their daily Durood recitations.
+IV. Event & Media Management: Admins can manage events, track attendance, and curate a filterable photo gallery with an interactive lightbox.
+V. Secure Admin Dashboard: Role-based access for managing users, content, and downloadable PDF reports.`,
+    github: 'https://github.com/Muqadas1234/durood-shareef-tracker',
+    demo: 'https://durood-shareef-tracker.vercel.app',
+    frontend: ['Next.js 14', 'React', 'Tailwind CSS', 'React Native', 'Expo'],
+    backend: ['Node.js', 'Next.js API Routes', 'PostgreSQL (Neon)', 'JWT Auth', 'bcrypt', 'Vercel'],
+  },
 ]
 
