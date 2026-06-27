@@ -453,6 +453,7 @@ IV. Patient Reminders: Instant confirmations and 24-hour alerts via WhatsApp/SMS
 V. Conflict Resolution: Real-time slot verification to prevent double-booking.`,
     note: 'Videos demonstrating booking, cancellation, and rescheduling workflows are available in the playlist.',
     github: 'https://github.com/Muqadas1234/AI-powered-hospital-appointment-agent',
+    demo: 'https://ai-powered-hospital-appointment-age.vercel.app/',
     youtube: 'kn9bAX83H00',
     frontend: ['React.js', 'Next.js'],
     backend: ['Node.js', 'Next.js API Routes', 'PostgreSQL', 'Prisma', 'VAPI (Voice Engine)', 'Twilio (Communications)', 'Google Calendar API', 'Vercel'],
