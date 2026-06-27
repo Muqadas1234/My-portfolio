@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { HiDownload, HiLocationMarker } from 'react-icons/hi'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { personalInfo } from '../../data/portfolioData'
+import { logClick } from '../../utils/analytics'
 
 export default function Hero() {
   const [typedText, setTypedText] = useState('')
@@ -79,6 +80,7 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary w-full sm:w-auto"
+              onClick={() => logClick('LinkedIn_Hero', 'LinkedIn Hero Link Click')}
             >
               <FaLinkedin />
               LinkedIn
@@ -88,11 +90,17 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary w-full sm:w-auto"
+              onClick={() => logClick('GitHub_Hero', 'GitHub Hero Link Click')}
             >
               <FaGithub />
               GitHub
             </a>
-            <a href={personalInfo.resumeUrl} download className="btn-secondary w-full sm:w-auto">
+            <a 
+              href={personalInfo.resumeUrl} 
+              download 
+              className="btn-secondary w-full sm:w-auto"
+              onClick={() => logClick('Resume_Download', 'Resume PDF Download Click')}
+            >
               <HiDownload />
               Download Resume
             </a>

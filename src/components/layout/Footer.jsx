@@ -1,5 +1,6 @@
 import { personalInfo, navLinks } from '../../data/portfolioData'
 import { FaEnvelope, FaPhone, FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa'
+import { logClick } from '../../utils/analytics'
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -39,19 +40,45 @@ export default function Footer() {
           {/* Contact Details (Connect Me) */}
           <div className="space-y-2">
             <p className="text-xs font-semibold uppercase tracking-wider text-neutral-500">Connect Me</p>
-            <a href={`mailto:${personalInfo.email}`} className="flex items-center gap-2 text-body-sm text-neutral-400 hover:text-white transition-colors w-fit">
+            <a 
+              href={`mailto:${personalInfo.email}`} 
+              className="flex items-center gap-2 text-body-sm text-neutral-400 hover:text-white transition-colors w-fit"
+              onClick={() => logClick('Email_Contact', 'Email contact click')}
+            >
               <FaEnvelope className="text-neutral-500" /> {personalInfo.email}
             </a>
-            <a href={`tel:${personalInfo.phone.replace(/\s/g, '')}`} className="flex items-center gap-2 text-body-sm text-neutral-400 hover:text-white transition-colors w-fit">
+            <a 
+              href={`tel:${personalInfo.phone.replace(/\s/g, '')}`} 
+              className="flex items-center gap-2 text-body-sm text-neutral-400 hover:text-white transition-colors w-fit"
+              onClick={() => logClick('Phone_Contact', 'Phone contact click')}
+            >
               <FaPhone className="text-neutral-500" /> {personalInfo.phone}
             </a>
-            <a href="https://wa.me/923198288490" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-body-sm text-neutral-400 hover:text-white transition-colors w-fit">
+            <a 
+              href="https://wa.me/923198288490" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex items-center gap-2 text-body-sm text-neutral-400 hover:text-white transition-colors w-fit"
+              onClick={() => logClick('WhatsApp_Contact', 'WhatsApp contact click')}
+            >
               <FaWhatsapp className="text-neutral-500" /> Chat on WhatsApp
             </a>
-            <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-body-sm text-neutral-400 hover:text-white transition-colors w-fit">
+            <a 
+              href={personalInfo.github} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex items-center gap-2 text-body-sm text-neutral-400 hover:text-white transition-colors w-fit"
+              onClick={() => logClick('GitHub_Footer', 'GitHub footer click')}
+            >
               <FaGithub className="text-neutral-500" /> GitHub
             </a>
-            <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-body-sm text-neutral-400 hover:text-white transition-colors w-fit">
+            <a 
+              href={personalInfo.linkedin} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex items-center gap-2 text-body-sm text-neutral-400 hover:text-white transition-colors w-fit"
+              onClick={() => logClick('LinkedIn_Footer', 'LinkedIn footer click')}
+            >
               <FaLinkedin className="text-neutral-500" /> LinkedIn
             </a>
           </div>

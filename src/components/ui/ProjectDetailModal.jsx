@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { HiX } from 'react-icons/hi'
 import { FaGithub, FaExternalLinkAlt, FaYoutube, FaGlobe } from 'react-icons/fa'
+import { logClick } from '../../utils/analytics'
 
 export default function ProjectDetailModal({ project, open, onClose }) {
   useEffect(() => {
@@ -198,6 +199,7 @@ export default function ProjectDetailModal({ project, open, onClose }) {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary flex-1 py-2 text-sm inline-flex items-center justify-center gap-2"
+              onClick={() => logClick('Modal_Live_App_' + project.title, 'Open Live App in Modal ' + project.title)}
             >
               <FaGlobe className="text-xs" />
               Open Live App
@@ -211,6 +213,7 @@ export default function ProjectDetailModal({ project, open, onClose }) {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary flex-1 py-2 text-sm inline-flex items-center justify-center gap-2"
+              onClick={() => logClick('Modal_GitHub_Repo_' + project.title, 'Open GitHub Repo in Modal ' + project.title)}
             >
               <FaGithub className="text-xs" />
               GitHub
@@ -224,6 +227,7 @@ export default function ProjectDetailModal({ project, open, onClose }) {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-md border border-neutral-300 bg-white px-6 py-2 text-sm font-semibold text-neutral-700 hover:border-black hover:text-black flex-1 transition-colors"
+              onClick={() => logClick('Modal_Watch_Youtube_' + project.title, 'Watch Video Demo in Modal ' + project.title)}
             >
               <FaYoutube className="text-red-600 text-xs" />
               Video Demo

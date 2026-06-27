@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import Hero from './components/sections/Hero'
@@ -7,9 +8,14 @@ import Skills from './components/sections/Skills'
 import Projects from './components/sections/Projects'
 import Certificates from './components/sections/Certificates'
 import Workflow from './components/sections/Workflow'
-
+import { initGA, logPageView } from './utils/analytics'
 
 export default function App() {
+  useEffect(() => {
+    initGA('G-MF50C45N00')
+    logPageView()
+  }, [])
+
   return (
     <>
       <Navbar />
