@@ -443,19 +443,19 @@ V. Secure Admin Dashboard: Role-based access for managing users, content, and do
   {
     id: 3,
     title: 'AI-Powered Hospital Appointment Voice Agent & Management System',
-    description: `A comprehensive hospital management solution that bridges the gap between patient convenience and administrative efficiency. At its core, the system features an intelligent AI Voice Assistant that enables patients to book, reschedule, and cancel appointments via phone call using natural language. This voice agent is seamlessly integrated with a secure Web Dashboard for hospital staff, ensuring real-time Google Calendar synchronization, automated WhatsApp/SMS reminders, and robust conflict prevention.
+    description: `A smart hospital management solution featuring an AI Voice Assistant that lets patients book, reschedule, and cancel appointments via phone call using natural language. It fully automates operations by syncing with Google Calendar, sending WhatsApp/SMS alerts, and providing a secure Web Dashboard for hospital staff.
 
 Key Features:
-I. AI Voice Booking System: Allows patients to manage their appointments (schedule, reschedule, cancel) over a phone call using natural language processing, without navigating complex menus.
-II. Centralized Admin Dashboard: A dedicated web interface for hospital administrators to monitor patient records, track daily schedules, and manage doctor availability.
-III. Real-Time Google Calendar Sync: Instantly creates and updates events on the doctor's personal Google Calendar the moment a patient confirms a booking via the voice agent.
-IV. Automated Patient Reminders: Reduces no-shows by sending instant booking confirmations and automated 24-hour reminders via WhatsApp and SMS.
-V. Smart Conflict Resolution: Automatically verifies slot availability in real-time to prevent overlapping appointments and double-booking.`,
+I. Voice AI Booking: Natural language scheduling over phone calls.
+II. Admin Dashboard: Web interface to manage patients and doctors.
+III. Google Calendar Sync: Live, automated updates to doctor schedules.
+IV. Patient Reminders: Instant confirmations and 24-hour alerts via WhatsApp/SMS.
+V. Conflict Resolution: Real-time slot verification to prevent double-booking.`,
     note: 'Videos demonstrating booking, cancellation, and rescheduling workflows are available in the playlist.',
     github: 'https://github.com/Muqadas1234/AI-powered-hospital-appointment-agent',
     youtube: 'kn9bAX83H00',
-    frontend: ['React.js', 'Next.js', 'CSS Glassmorphism'],
-    backend: ['Node.js', 'Next.js Serverless API Routes', 'PostgreSQL', 'Prisma ORM', 'Vapi', 'Twilio API', 'Google Calendar API', 'Vercel'],
+    frontend: ['React.js', 'Next.js'],
+    backend: ['Node.js', 'Next.js API Routes', 'PostgreSQL', 'Prisma', 'VAPI (Voice Engine)', 'Twilio (Communications)', 'Google Calendar API', 'Vercel'],
   },
   {
     id: 4,
