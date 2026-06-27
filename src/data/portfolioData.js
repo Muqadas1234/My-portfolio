@@ -442,21 +442,20 @@ V. Secure Admin Dashboard: Role-based access for managing users, content, and do
   },
   {
     id: 3,
-    title: 'AI Receptionist',
-    description: `AI Receptionist is a production-ready, voice-driven scheduling platform designed for clinics and hospitals. It allows patients to book, reschedule, or cancel appointments through natural conversation with an AI assistant, while healthcare staff manage slots, fees, and logs through a secure administrative dashboard.
+    title: 'AI-Powered Hospital Appointment Voice Agent & Management System',
+    description: `A comprehensive hospital management solution that bridges the gap between patient convenience and administrative efficiency. At its core, the system features an intelligent AI Voice Assistant that enables patients to book, reschedule, and cancel appointments via phone call using natural language. This voice agent is seamlessly integrated with a secure Web Dashboard for hospital staff, ensuring real-time Google Calendar synchronization, automated WhatsApp/SMS reminders, and robust conflict prevention.
 
 Key Features:
-I. Voice Assistant: Conversational, natural-language appointment booking, rescheduling, and cancellation with instant confirmation powered by Vapi.
-II. Provider Dashboard: Administrative management of medical providers, time slots, consultation fees in PKR, and patient FAQs.
-III. Calendar Integration: Automated real-time Google Calendar synchronization to manage and block booked appointment slots.
-IV. Automated Reminders: Instant patient alerts and appointment reminders sent via Twilio SMS and WhatsApp messaging.
-V. Secure Web Portal: Complete admin interface to view appointment histories, notification delivery status, and system audit logs.
-VI. JWT-Protected API: Highly secure backend routes protected by JSON Web Tokens (JWT) coupled with tool endpoints for the voice stack.`,
+I. AI Voice Booking System: Allows patients to manage their appointments (schedule, reschedule, cancel) over a phone call using natural language processing, without navigating complex menus.
+II. Centralized Admin Dashboard: A dedicated web interface for hospital administrators to monitor patient records, track daily schedules, and manage doctor availability.
+III. Real-Time Google Calendar Sync: Instantly creates and updates events on the doctor's personal Google Calendar the moment a patient confirms a booking via the voice agent.
+IV. Automated Patient Reminders: Reduces no-shows by sending instant booking confirmations and automated 24-hour reminders via WhatsApp and SMS.
+V. Smart Conflict Resolution: Automatically verifies slot availability in real-time to prevent overlapping appointments and double-booking.`,
     note: 'Videos demonstrating booking, cancellation, and rescheduling workflows are available in the playlist.',
     github: 'https://github.com/Muqadas1234/AI-powered-hospital-appointment-agent',
     youtube: 'kn9bAX83H00',
-    frontend: ['React', 'Vite'],
-    backend: ['Python', 'FastAPI', 'PostgreSQL', 'Vapi', 'Google Calendar API', 'Twilio', 'SQLAlchemy', 'Alembic'],
+    frontend: ['React.js', 'Next.js', 'CSS Glassmorphism'],
+    backend: ['Node.js', 'Next.js Serverless API Routes', 'PostgreSQL', 'Prisma ORM', 'Vapi', 'Twilio API', 'Google Calendar API', 'Vercel'],
   },
   {
     id: 4,
