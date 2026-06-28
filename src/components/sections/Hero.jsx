@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { HiDownload, HiLocationMarker } from 'react-icons/hi'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { personalInfo } from '../../data/portfolioData'
-import { logClick } from '../../utils/analytics'
+import { trackResumeDownload, trackGitHubClick, trackLinkedInClick } from '../../utils/analytics'
 
 export default function Hero() {
   const [typedText, setTypedText] = useState('')
@@ -19,59 +19,47 @@ export default function Hero() {
             setIsDeleting(true)
             return prev
           }
-          return fullName.slice(0, prev.length + 1)
+          return fullName.substring(0, prev.length + 1)
         } else {
           if (prev === '') {
             setIsDeleting(false)
             return prev
           }
-          return fullName.slice(0, prev.length - 1)
+          return fullName.substring(0, prev.length - 1)
         }
       })
     }
 
-    let delay = 100
-    if (isDeleting) {
-      delay = 50
-    }
-    if (!isDeleting && typedText === fullName) {
-      delay = 2000 // Pause after typing completes
-    } else if (isDeleting && typedText === '') {
-      delay = 500 // Pause after erasing completes
-    }
+    timer = setTimeout(tick, isDeleting ? 75 : 120)
 
-    timer = setTimeout(tick, delay)
     return () => clearTimeout(timer)
   }, [typedText, isDeleting, fullName])
 
   return (
-    <section
-      id="home"
-      className="px-4 sm:px-6 lg:px-8 pt-28 pb-20 border-b border-neutral-200"
-    >
-      <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[minmax(0,_1.2fr)_minmax(0,_0.9fr)]">
-        <div className="text-left">
-          <h1 className="text-display text-2xl xs:text-3xl sm:text-5xl lg:text-[3.5rem] min-h-[3rem] sm:min-h-[4rem] lg:min-h-[5rem] flex items-center whitespace-nowrap">
-            <span>{typedText}</span>
-            <span className="animate-pulse ml-1 text-neutral-400 font-light" style={{ animationDuration: '0.8s' }}>|</span>
-          </h1>
-          <p className="mt-4 text-title-sm font-semibold text-center text-black">
-            {personalInfo.title}
-          </p>
-
-          <div className="mt-8 space-y-4 max-w-2xl">
-            {personalInfo.aboutHome.map((paragraph) => (
-              <p key={paragraph.slice(0, 40)} className="text-body-sm text-justify">
-                {paragraph}
-              </p>
-            ))}
+    <section id="home" className="pt-24 pb-16 bg-white text-black min-h-[90vh] flex items-center">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid md:grid-cols-2 gap-12 items-center">
+        <div className="space-y-6">
+          <div className="inline-flex items-center gap-2 rounded-full border border-neutral-300 px-3 py-1 text-xs font-semibold uppercase tracking-wider bg-neutral-50 shadow-sm">
+            <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+            Open to opportunities
           </div>
 
-          <div className="mt-8 flex justify-center">
-            <p className="inline-flex items-center gap-2 text-body-sm font-medium text-black">
-              <HiLocationMarker className="flex-shrink-0" aria-hidden="true" />
-              {personalInfo.location}
+          <div className="space-y-4">
+            <h1 className="text-display-md md:text-display-lg font-bold tracking-tight text-neutral-900 min-h-[4.5rem]">
+              {typedText}
+              <span className="inline-block w-[3px] h-[2.5rem] bg-black ml-1 animate-pulse" />
+            </h1>
+            <p className="text-title-lg text-neutral-800 font-semibold leading-relaxed">
+              {personalInfo.title}
             </p>
+            <p className="text-body-lg text-neutral-500 leading-relaxed">
+              {personalInfo.aboutShort}
+            </p>
+          </div>
+
+          <div className="flex items-center gap-2 text-body-sm text-neutral-500 font-medium">
+            <HiLocationMarker className="text-neutral-400 text-lg" />
+            {personalInfo.location}
           </div>
 
           <div className="mt-8 flex flex-col sm:flex-row items-start gap-3">
@@ -80,7 +68,7 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary w-full sm:w-auto"
-              onClick={() => logClick('LinkedIn_Hero', 'LinkedIn Hero Link Click')}
+              onClick={() => trackLinkedInClick('Hero')}
             >
               <FaLinkedin />
               LinkedIn
@@ -90,7 +78,7 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary w-full sm:w-auto"
-              onClick={() => logClick('GitHub_Hero', 'GitHub Hero Link Click')}
+              onClick={() => trackGitHubClick('Hero')}
             >
               <FaGithub />
               GitHub
@@ -99,7 +87,7 @@ export default function Hero() {
               href={personalInfo.resumeUrl} 
               download 
               className="btn-secondary w-full sm:w-auto"
-              onClick={() => logClick('Resume_Download', 'Resume PDF Download Click')}
+              onClick={() => trackResumeDownload()}
             >
               <HiDownload />
               Download Resume

@@ -5,7 +5,7 @@ import SectionHeader from '../ui/SectionHeader'
 import MediaLightbox from '../ui/MediaLightbox'
 import ProjectDetailModal from '../ui/ProjectDetailModal'
 import { projects } from '../../data/portfolioData'
-import { logClick, logEvent } from '../../utils/analytics'
+import { trackProjectOpen, trackLiveDemoClick, trackGitHubClick, logClick } from '../../utils/analytics'
 
 function StackRow({ label, items }) {
   if (!items?.length) return null
@@ -65,7 +65,7 @@ export default function Projects() {
                 <button
                   type="button"
                   onClick={() => {
-                    logEvent('Project', 'View Details', project.title)
+                    trackProjectOpen(project.title)
                     setSelectedProject(project)
                   }}
                   className="rounded bg-black px-2.5 py-1 text-xs font-semibold text-white hover:bg-neutral-800 transition-colors shadow-sm cursor-pointer"
@@ -93,7 +93,7 @@ export default function Projects() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-md bg-black py-2 text-sm font-semibold text-white hover:bg-neutral-800"
-                  onClick={() => logClick('Project_Live_App_' + project.title, 'Open Live App ' + project.title)}
+                  onClick={() => trackLiveDemoClick(project.title)}
                 >
                   <FaGlobe className="text-xs" />
                   Open Live App
@@ -113,7 +113,7 @@ export default function Projects() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-md border-2 border-black py-2 text-sm font-semibold text-black hover:bg-neutral-100"
-                  onClick={() => logClick('Project_GitHub_Repo_' + project.title, 'Open GitHub Repo ' + project.title)}
+                  onClick={() => trackGitHubClick('Project_Card_' + project.title)}
                 >
                   <FaGithub />
                   GitHub

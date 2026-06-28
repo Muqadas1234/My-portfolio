@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { HiX } from 'react-icons/hi'
 import { FaGithub, FaExternalLinkAlt, FaYoutube, FaGlobe } from 'react-icons/fa'
-import { logClick } from '../../utils/analytics'
+import { logClick, trackLiveDemoClick, trackGitHubClick } from '../../utils/analytics'
 
 export default function ProjectDetailModal({ project, open, onClose }) {
   useEffect(() => {
@@ -199,7 +199,7 @@ export default function ProjectDetailModal({ project, open, onClose }) {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary flex-1 py-2 text-sm inline-flex items-center justify-center gap-2"
-              onClick={() => logClick('Modal_Live_App_' + project.title, 'Open Live App in Modal ' + project.title)}
+              onClick={() => trackLiveDemoClick(project.title)}
             >
               <FaGlobe className="text-xs" />
               Open Live App
@@ -213,7 +213,7 @@ export default function ProjectDetailModal({ project, open, onClose }) {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary flex-1 py-2 text-sm inline-flex items-center justify-center gap-2"
-              onClick={() => logClick('Modal_GitHub_Repo_' + project.title, 'Open GitHub Repo in Modal ' + project.title)}
+              onClick={() => trackGitHubClick('Project_Modal_' + project.title)}
             >
               <FaGithub className="text-xs" />
               GitHub

@@ -1,6 +1,6 @@
 import { personalInfo, navLinks } from '../../data/portfolioData'
 import { FaEnvelope, FaPhone, FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa'
-import { logClick } from '../../utils/analytics'
+import { trackEmailClick, trackWhatsAppClick, trackGitHubClick, trackLinkedInClick, logClick } from '../../utils/analytics'
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -43,7 +43,7 @@ export default function Footer() {
             <a 
               href={`mailto:${personalInfo.email}`} 
               className="flex items-center gap-2 text-body-sm text-neutral-400 hover:text-white transition-colors w-fit"
-              onClick={() => logClick('Email_Contact', 'Email contact click')}
+              onClick={() => trackEmailClick()}
             >
               <FaEnvelope className="text-neutral-500" /> {personalInfo.email}
             </a>
@@ -59,7 +59,7 @@ export default function Footer() {
               target="_blank" 
               rel="noopener noreferrer" 
               className="flex items-center gap-2 text-body-sm text-neutral-400 hover:text-white transition-colors w-fit"
-              onClick={() => logClick('WhatsApp_Contact', 'WhatsApp contact click')}
+              onClick={() => trackWhatsAppClick()}
             >
               <FaWhatsapp className="text-neutral-500" /> Chat on WhatsApp
             </a>
@@ -68,7 +68,7 @@ export default function Footer() {
               target="_blank" 
               rel="noopener noreferrer" 
               className="flex items-center gap-2 text-body-sm text-neutral-400 hover:text-white transition-colors w-fit"
-              onClick={() => logClick('GitHub_Footer', 'GitHub footer click')}
+              onClick={() => trackGitHubClick('Footer')}
             >
               <FaGithub className="text-neutral-500" /> GitHub
             </a>
@@ -77,7 +77,7 @@ export default function Footer() {
               target="_blank" 
               rel="noopener noreferrer" 
               className="flex items-center gap-2 text-body-sm text-neutral-400 hover:text-white transition-colors w-fit"
-              onClick={() => logClick('LinkedIn_Footer', 'LinkedIn footer click')}
+              onClick={() => trackLinkedInClick('Footer')}
             >
               <FaLinkedin className="text-neutral-500" /> LinkedIn
             </a>
