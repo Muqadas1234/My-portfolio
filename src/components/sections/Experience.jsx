@@ -5,6 +5,7 @@ import SectionHeader from '../ui/SectionHeader'
 import JourneyLinks from '../ui/JourneyLinks'
 import MediaLightbox from '../ui/MediaLightbox'
 import { experience } from '../../data/portfolioData'
+import { logClick } from '../../utils/analytics'
 
 const PAPER_TITLE = 'Link Prediction in Bitcoin Transaction Graphs Using Graph Neural Networks'
 
@@ -145,16 +146,33 @@ export default function Experience() {
             {/* Abstract button */}
             <button
               type="button"
-              onClick={() => setShowAbstract(true)}
+              onClick={() => {
+                logClick('iCOMET_Abstract_Open', 'iCOMET Paper Abstract Open')
+                setShowAbstract(true)
+              }}
               className="inline-flex items-center gap-2 rounded-md border-2 border-black bg-white px-4 py-2 text-sm font-semibold text-black hover:bg-neutral-100 transition-colors"
             >
               📄 Abstract
             </button>
 
+            {/* Publication button */}
+            <a
+              href="https://ieeexplore.ieee.org/document/11591533"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => logClick('iCOMET_Publication_Click', 'iCOMET IEEE Publication Click')}
+              className="inline-flex items-center gap-2 rounded-md border-2 border-black bg-white px-4 py-2 text-sm font-semibold text-black hover:bg-neutral-100 transition-colors"
+            >
+              🌐 Publication
+            </a>
+
             {/* Certificate buttons */}
             <button
               type="button"
-              onClick={() => setShowCert(true)}
+              onClick={() => {
+                logClick('iCOMET_Presenter_Cert_View', 'Presenter Certificate View')
+                setShowCert(true)
+              }}
               className="inline-flex items-center gap-2 rounded-md border-2 border-black bg-white px-4 py-2 text-sm font-semibold text-black hover:bg-neutral-100 transition-colors"
             >
               🎓 Presenter Certificate
@@ -162,7 +180,10 @@ export default function Experience() {
 
             <button
               type="button"
-              onClick={() => setShowAuthorship(true)}
+              onClick={() => {
+                logClick('iCOMET_Authorship_Cert_View', 'Authorship Certificate View')
+                setShowAuthorship(true)
+              }}
               className="inline-flex items-center gap-2 rounded-md border-2 border-black bg-white px-4 py-2 text-sm font-semibold text-black hover:bg-neutral-100 transition-colors"
             >
               📜 Authorship Certificate
