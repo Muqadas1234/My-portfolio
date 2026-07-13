@@ -22,6 +22,7 @@ import {
   SiGit,
   SiGooglecolab,
   SiNodedotjs,
+  SiNextdotjs,
 } from 'react-icons/si'
 import { VscVscode } from 'react-icons/vsc'
 import { TbBrandCpp } from 'react-icons/tb'
@@ -380,6 +381,7 @@ export const skillGroups = [
     category: 'Frontend',
     skills: [
       { name: 'React.js', icon: FaReact },
+      { name: 'Next.js', icon: SiNextdotjs },
       { name: 'HTML', icon: SiHtml5 },
       { name: 'CSS', icon: SiCss },
       { name: 'Tailwind CSS', icon: SiTailwindcss },
