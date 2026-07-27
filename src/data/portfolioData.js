@@ -307,6 +307,18 @@ export const certificateGroups = [
 
 export const experience = [
   {
+    title: 'Software Developer Intern – MERN Stack',
+    company: '10Pearls Pakistan (SHINE Internship Program)',
+    location: 'Remote',
+    period: 'Jul 2026 – Present',
+    certificateImage: '/certificates/10pearls-shine-confirmation.png',
+    certificateTitle: '10Pearls Pakistan SHINE Internship Program Confirmation',
+    highlights: [
+      'Building full-stack web applications using MongoDB, Express.js, React.js, and Node.js, following professional agile development workflows, code review, and Git-based version control.',
+      'Developing and consuming REST APIs to integrate frontend and backend services, applying industry-standard coding best practices and testing conventions.',
+    ],
+  },
+  {
     title: 'AI/ML Intern',
     company: 'Elevvo Pathways',
     location: 'Remote · Cairo, Egypt',
