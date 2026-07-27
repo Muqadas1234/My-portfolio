@@ -311,8 +311,6 @@ export const experience = [
     company: '10Pearls Pakistan (SHINE Internship Program)',
     location: 'Remote',
     period: 'Jul 2026 – Present',
-    certificateImage: '/certificates/10pearls-shine-confirmation.png',
-    certificateTitle: '10Pearls Pakistan SHINE Internship Program Confirmation',
     highlights: [
       'Building full-stack web applications using MongoDB, Express.js, React.js, and Node.js, following professional agile development workflows, code review, and Git-based version control.',
       'Developing and consuming REST APIs to integrate frontend and backend services, applying industry-standard coding best practices and testing conventions.',
