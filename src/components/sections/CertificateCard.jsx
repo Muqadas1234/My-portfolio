@@ -114,18 +114,6 @@ export default function CertificateCard({ cert }) {
                 )}
               </button>
             )}
-
-            {cert.url && (
-              <a
-                href={cert.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 w-full rounded-md border-2 border-black py-2 text-sm font-semibold text-black hover:bg-neutral-100"
-              >
-                {cert.credentialLabel || 'View Credential'}
-                <FaExternalLinkAlt className="text-xs" />
-              </a>
-            )}
           </div>
         </div>
       </article>
