@@ -6,6 +6,26 @@ import MediaLightbox from '../ui/MediaLightbox'
 import ProjectDetailModal from '../ui/ProjectDetailModal'
 import { projects } from '../../data/portfolioData'
 import { trackProjectOpen, trackLiveDemoClick, trackGitHubClick, logClick } from '../../utils/analytics'
+import { motion } from 'framer-motion'
+
+const gridVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+}
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: [0.215, 0.61, 0.355, 1] },
+  },
+}
 
 function StackRow({ label, items }) {
   if (!items?.length) return null
@@ -51,9 +71,19 @@ export default function Projects() {
     <SectionWrapper id="projects">
       <SectionHeader label="Projects" title="Featured Work" />
 
-      <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+      <motion.div
+        variants={gridVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: '-50px' }}
+        className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto"
+      >
         {projects.map((project) => (
-          <article key={project.id} className="card-hover flex flex-col gap-3">
+          <motion.article
+            variants={cardVariants}
+            key={project.id}
+            className="card-hover flex flex-col gap-3"
+          >
             <div className="flex items-start justify-between gap-2">
               <h3 className="text-title-md leading-snug">{project.title}</h3>
               <div className="flex items-center gap-2 flex-shrink-0">
@@ -143,9 +173,9 @@ export default function Projects() {
                 </div>
               )}
             </div>
-          </article>
+          </motion.article>
         ))}
-      </div>
+      </motion.div>
 
       <ProjectDetailModal
         project={selectedProject}
