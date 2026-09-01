@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { FaPaperPlane, FaCheckCircle } from 'react-icons/fa'
 import SectionWrapper from '../ui/SectionWrapper'
+import SectionHeader from '../ui/SectionHeader'
 import { personalInfo } from '../../data/portfolioData'
 import { trackContactFormSubmit } from '../../utils/analytics'
 
@@ -69,44 +70,47 @@ export default function Contact() {
   }
 
   return (
-    <SectionWrapper id="contact" className="border-t border-neutral-200 bg-white py-8 sm:py-10">
-      <div className="max-w-md mx-auto">
-        {/* Minimalist Compact Header */}
-        <div className="text-center mb-5">
-          <p className="text-xs font-semibold uppercase tracking-widest text-neutral-400">Get In Touch</p>
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-black mt-1">Let's Connect</h2>
-          <p className="text-xs sm:text-sm text-neutral-500 mt-1 max-w-xs mx-auto">
-            Got an opportunity or project? Drop a quick note below.
-          </p>
-        </div>
+    <SectionWrapper id="contact" className="border-t border-neutral-200 bg-white !pt-6 !pb-12 sm:!pt-8 sm:!pb-14">
+      <SectionHeader
+        label="Get in Touch"
+        title="Contact"
+        description="Have an opportunity or project in mind? Send a message below."
+      />
 
-        {/* Ultra-Clean Compact Form Card */}
-        <div className="rounded-2xl border border-neutral-200 bg-white p-5 sm:p-6 shadow-sm hover:shadow-md transition-shadow">
+      <div className="max-w-xl mx-auto mt-4">
+        <div className="card p-5 sm:p-6 shadow-sm border border-neutral-200">
           {status === 'success' ? (
             <div className="py-6 text-center space-y-3">
-              <div className="w-12 h-12 rounded-full bg-neutral-900 text-white flex items-center justify-center mx-auto shadow-sm">
-                <FaCheckCircle className="text-xl text-emerald-400" />
+              <div className="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
+                <FaCheckCircle className="text-2xl" />
               </div>
-              <h4 className="text-base font-bold text-black">Message Delivered!</h4>
-              <p className="text-xs text-neutral-600 max-w-xs mx-auto leading-relaxed">
-                Thank you, <span className="font-semibold text-black">{formData.name}</span>. I've received your note and will get back to you shortly.
+              <h4 className="text-title-md font-bold text-black">Message Sent!</h4>
+              <p className="text-body-sm text-neutral-600 max-w-sm mx-auto text-xs sm:text-sm">
+                Thank you, <span className="font-semibold text-black">{formData.name}</span>. I have received your message and will respond to your email shortly.
               </p>
               <div className="pt-2">
                 <button
                   type="button"
                   onClick={handleReset}
-                  className="rounded-lg border border-neutral-300 bg-white px-4 py-1.5 text-xs font-semibold text-neutral-800 hover:border-black hover:text-black transition-colors"
+                  className="btn-secondary text-xs py-1.5 px-4"
                 >
-                  Send Another
+                  Send Another Message
                 </button>
               </div>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-3.5">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <form onSubmit={handleSubmit} className="space-y-3">
+              <div>
+                <h3 className="text-title-sm font-bold text-black">Send a Message</h3>
+                <p className="text-xs text-neutral-500 mt-0.5">
+                  Fill in the details below to send me an email.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
                 <div>
-                  <label htmlFor="name" className="block text-[11px] font-medium text-neutral-600 mb-1">
-                    Name <span className="text-red-500">*</span>
+                  <label htmlFor="name" className="block text-[11px] font-semibold uppercase tracking-wider text-neutral-700 mb-1">
+                    Your Name <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="text"
@@ -115,14 +119,14 @@ export default function Contact() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="Your Name"
-                    className="w-full rounded-lg border border-neutral-200 bg-neutral-50/70 px-3 py-2 text-xs sm:text-sm text-neutral-900 placeholder-neutral-400 focus:bg-white focus:border-black focus:ring-1 focus:ring-black outline-none transition-all"
+                    placeholder="John Doe"
+                    className="w-full rounded border border-neutral-300 bg-white px-3 py-1.5 text-xs sm:text-sm text-neutral-900 placeholder-neutral-400 focus:border-black focus:outline-none focus:ring-1 focus:ring-black transition-colors"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-[11px] font-medium text-neutral-600 mb-1">
-                    Email <span className="text-red-500">*</span>
+                  <label htmlFor="email" className="block text-[11px] font-semibold uppercase tracking-wider text-neutral-700 mb-1">
+                    Your Email <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="email"
@@ -131,14 +135,14 @@ export default function Contact() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="name@email.com"
-                    className="w-full rounded-lg border border-neutral-200 bg-neutral-50/70 px-3 py-2 text-xs sm:text-sm text-neutral-900 placeholder-neutral-400 focus:bg-white focus:border-black focus:ring-1 focus:ring-black outline-none transition-all"
+                    placeholder="john@example.com"
+                    className="w-full rounded border border-neutral-300 bg-white px-3 py-1.5 text-xs sm:text-sm text-neutral-900 placeholder-neutral-400 focus:border-black focus:outline-none focus:ring-1 focus:ring-black transition-colors"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-[11px] font-medium text-neutral-600 mb-1">
+                <label htmlFor="subject" className="block text-[11px] font-semibold uppercase tracking-wider text-neutral-700 mb-1">
                   Subject <span className="text-neutral-400 font-normal">(Optional)</span>
                 </label>
                 <input
@@ -147,13 +151,13 @@ export default function Contact() {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  placeholder="e.g. Project Inquiry"
-                  className="w-full rounded-lg border border-neutral-200 bg-neutral-50/70 px-3 py-2 text-xs sm:text-sm text-neutral-900 placeholder-neutral-400 focus:bg-white focus:border-black focus:ring-1 focus:ring-black outline-none transition-all"
+                  placeholder="Project Inquiry / Job Opportunity"
+                  className="w-full rounded border border-neutral-300 bg-white px-3 py-1.5 text-xs sm:text-sm text-neutral-900 placeholder-neutral-400 focus:border-black focus:outline-none focus:ring-1 focus:ring-black transition-colors"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-[11px] font-medium text-neutral-600 mb-1">
+                <label htmlFor="message" className="block text-[11px] font-semibold uppercase tracking-wider text-neutral-700 mb-1">
                   Message <span className="text-red-500">*</span>
                 </label>
                 <textarea
@@ -163,15 +167,15 @@ export default function Contact() {
                   rows={3}
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="How can I help you?"
-                  className="w-full rounded-lg border border-neutral-200 bg-neutral-50/70 px-3 py-2 text-xs sm:text-sm text-neutral-900 placeholder-neutral-400 focus:bg-white focus:border-black focus:ring-1 focus:ring-black outline-none transition-all resize-y min-h-[70px]"
+                  placeholder="Type your message here..."
+                  className="w-full rounded border border-neutral-300 bg-white px-3 py-1.5 text-xs sm:text-sm text-neutral-900 placeholder-neutral-400 focus:border-black focus:outline-none focus:ring-1 focus:ring-black transition-colors resize-y min-h-[75px]"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={status === 'submitting'}
-                className="w-full rounded-lg bg-black py-2.5 text-xs sm:text-sm font-semibold text-white hover:bg-neutral-800 transition-colors inline-flex items-center justify-center gap-2 shadow-sm disabled:opacity-75 disabled:cursor-not-allowed"
+                className="btn-primary w-full py-2.5 inline-flex items-center justify-center gap-2 text-xs sm:text-sm font-semibold shadow-sm mt-1 disabled:opacity-75 disabled:cursor-not-allowed"
               >
                 {status === 'submitting' ? (
                   <>
@@ -180,7 +184,7 @@ export default function Contact() {
                   </>
                 ) : (
                   <>
-                    <FaPaperPlane className="text-[10px]" />
+                    <FaPaperPlane className="text-[11px]" />
                     Send Message
                   </>
                 )}
