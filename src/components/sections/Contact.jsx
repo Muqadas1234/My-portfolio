@@ -70,46 +70,46 @@ export default function Contact() {
   }
 
   return (
-    <SectionWrapper id="contact" className="border-t border-neutral-200 bg-white py-12 sm:py-16">
+    <SectionWrapper id="contact" className="border-t border-neutral-200 bg-white !pt-6 !pb-12 sm:!pt-8 sm:!pb-14">
       <SectionHeader
         label="Get in Touch"
         title="Contact"
-        description="Have an opportunity or project in mind? Send a message and I'll get back to you shortly."
+        description="Have an opportunity or project in mind? Send a message below."
       />
 
-      <div className="max-w-2xl mx-auto mt-6">
-        <div className="card p-6 sm:p-8">
+      <div className="max-w-xl mx-auto mt-4">
+        <div className="card p-5 sm:p-6 shadow-sm border border-neutral-200">
           {status === 'success' ? (
-            <div className="py-8 text-center space-y-4">
-              <div className="w-14 h-14 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
-                <FaCheckCircle className="text-3xl" />
+            <div className="py-6 text-center space-y-3">
+              <div className="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
+                <FaCheckCircle className="text-2xl" />
               </div>
               <h4 className="text-title-md font-bold text-black">Message Sent!</h4>
-              <p className="text-body-sm text-neutral-600 max-w-sm mx-auto text-sm">
+              <p className="text-body-sm text-neutral-600 max-w-sm mx-auto text-xs sm:text-sm">
                 Thank you, <span className="font-semibold text-black">{formData.name}</span>. I have received your message and will respond to your email shortly.
               </p>
               <div className="pt-2">
                 <button
                   type="button"
                   onClick={handleReset}
-                  className="btn-secondary text-xs sm:text-sm py-2 px-5"
+                  className="btn-secondary text-xs py-1.5 px-4"
                 >
                   Send Another Message
                 </button>
               </div>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-3">
               <div>
-                <h3 className="text-title-md font-bold text-black">Send a Message</h3>
-                <p className="text-xs sm:text-sm text-neutral-500 mt-1">
-                  Fill in the form below and your message will be delivered straight to my inbox.
+                <h3 className="text-title-sm font-bold text-black">Send a Message</h3>
+                <p className="text-xs text-neutral-500 mt-0.5">
+                  Fill in the details below to send me an email.
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
                 <div>
-                  <label htmlFor="name" className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-1.5">
+                  <label htmlFor="name" className="block text-[11px] font-semibold uppercase tracking-wider text-neutral-700 mb-1">
                     Your Name <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -120,12 +120,12 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="John Doe"
-                    className="w-full rounded-md border border-neutral-300 bg-white px-3.5 py-2.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-black focus:outline-none focus:ring-1 focus:ring-black transition-colors"
+                    className="w-full rounded border border-neutral-300 bg-white px-3 py-1.5 text-xs sm:text-sm text-neutral-900 placeholder-neutral-400 focus:border-black focus:outline-none focus:ring-1 focus:ring-black transition-colors"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-1.5">
+                  <label htmlFor="email" className="block text-[11px] font-semibold uppercase tracking-wider text-neutral-700 mb-1">
                     Your Email <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -136,13 +136,13 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="john@example.com"
-                    className="w-full rounded-md border border-neutral-300 bg-white px-3.5 py-2.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-black focus:outline-none focus:ring-1 focus:ring-black transition-colors"
+                    className="w-full rounded border border-neutral-300 bg-white px-3 py-1.5 text-xs sm:text-sm text-neutral-900 placeholder-neutral-400 focus:border-black focus:outline-none focus:ring-1 focus:ring-black transition-colors"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-1.5">
+                <label htmlFor="subject" className="block text-[11px] font-semibold uppercase tracking-wider text-neutral-700 mb-1">
                   Subject <span className="text-neutral-400 font-normal">(Optional)</span>
                 </label>
                 <input
@@ -151,40 +151,40 @@ export default function Contact() {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  placeholder="Project Inquiry / Hiring Opportunity"
-                  className="w-full rounded-md border border-neutral-300 bg-white px-3.5 py-2.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-black focus:outline-none focus:ring-1 focus:ring-black transition-colors"
+                  placeholder="Project Inquiry / Job Opportunity"
+                  className="w-full rounded border border-neutral-300 bg-white px-3 py-1.5 text-xs sm:text-sm text-neutral-900 placeholder-neutral-400 focus:border-black focus:outline-none focus:ring-1 focus:ring-black transition-colors"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-1.5">
+                <label htmlFor="message" className="block text-[11px] font-semibold uppercase tracking-wider text-neutral-700 mb-1">
                   Message <span className="text-red-500">*</span>
                 </label>
                 <textarea
                   id="message"
                   name="message"
                   required
-                  rows={4}
+                  rows={3}
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Type your message here..."
-                  className="w-full rounded-md border border-neutral-300 bg-white px-3.5 py-2.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-black focus:outline-none focus:ring-1 focus:ring-black transition-colors resize-y min-h-[100px]"
+                  className="w-full rounded border border-neutral-300 bg-white px-3 py-1.5 text-xs sm:text-sm text-neutral-900 placeholder-neutral-400 focus:border-black focus:outline-none focus:ring-1 focus:ring-black transition-colors resize-y min-h-[75px]"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={status === 'submitting'}
-                className="btn-primary w-full py-3 inline-flex items-center justify-center gap-2 text-sm font-semibold shadow-sm mt-2 disabled:opacity-75 disabled:cursor-not-allowed"
+                className="btn-primary w-full py-2.5 inline-flex items-center justify-center gap-2 text-xs sm:text-sm font-semibold shadow-sm mt-1 disabled:opacity-75 disabled:cursor-not-allowed"
               >
                 {status === 'submitting' ? (
                   <>
-                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                    <div className="w-3.5 h-3.5 border-2 border-white border-t-transparent rounded-full animate-spin" />
                     Sending...
                   </>
                 ) : (
                   <>
-                    <FaPaperPlane className="text-xs" />
+                    <FaPaperPlane className="text-[11px]" />
                     Send Message
                   </>
                 )}
