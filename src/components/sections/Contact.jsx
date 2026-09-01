@@ -34,23 +34,43 @@ export default function Contact() {
     setStatus('submitting')
     trackContactFormSubmit(formData.subject)
 
-    // Simulate async submission and mailto fallback
     try {
-      await new Promise((resolve) => setTimeout(resolve, 800))
-      
-      // Construct mailto link for direct delivery fallback
-      const mailtoLink = `mailto:${personalInfo.email}?subject=${encodeURIComponent(
+      const response = await fetch(`https://formsubmit.co/ajax/${personalInfo.email}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject || `Portfolio Message from ${formData.name}`,
+          message: formData.message,
+          _subject: formData.subject ? `[Portfolio] ${formData.subject}` : `New Portfolio Inquiry from ${formData.name}`,
+          _template: 'table',
+          _captcha: 'false',
+        }),
+      })
+
+      if (response.ok) {
+        setStatus('success')
+      } else {
+        // Fallback to direct mailto if external endpoint has issues
+        window.location.href = `mailto:${personalInfo.email}?subject=${encodeURIComponent(
+          formData.subject || `Message from ${formData.name}`
+        )}&body=${encodeURIComponent(
+          `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+        )}`
+        setStatus('success')
+      }
+    } catch {
+      // Direct mailto fallback on network error
+      window.location.href = `mailto:${personalInfo.email}?subject=${encodeURIComponent(
         formData.subject || `Message from ${formData.name}`
       )}&body=${encodeURIComponent(
         `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
       )}`
-
-      // Open mail client in background if user prefers
-      window.location.href = mailtoLink
-
       setStatus('success')
-    } catch {
-      setStatus('error')
     }
   }
 
