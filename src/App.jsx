@@ -8,6 +8,7 @@ import Skills from './components/sections/Skills'
 import Projects from './components/sections/Projects'
 import Certificates from './components/sections/Certificates'
 import Workflow from './components/sections/Workflow'
+import Contact from './components/sections/Contact'
 import { initGA, logPageView } from './utils/analytics'
 
 export default function App() {
@@ -27,6 +28,7 @@ export default function App() {
         <Projects />
         <Certificates />
         <Workflow />
+        <Contact />
       </main>
       <Footer />
     </>

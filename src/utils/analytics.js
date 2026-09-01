@@ -66,6 +66,13 @@ export const trackLinkedInClick = (label) => {
 }
 
 /**
+ * Tracks when a user submits the contact form.
+ */
+export const trackContactFormSubmit = (subject = '') => {
+  ReactGA.event('contact_form_submit', { subject })
+}
+
+/**
  * Tracks a generic click event.
  */
 export const logClick = (action, label = '') => {

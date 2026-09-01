@@ -101,7 +101,7 @@ export const navLinks = [
   { id: 'projects', label: 'Projects' },
   { id: 'certificates', label: 'Certificates' },
   { id: 'workflow', label: 'Workflow' },
-  { id: 'connect', label: 'Connect' },
+  { id: 'contact', label: 'Contact' },
 ]
 
 export const certificateGroups = [
