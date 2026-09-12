@@ -72,9 +72,9 @@ export default function Contact() {
   return (
     <SectionWrapper id="contact" className="border-t border-neutral-200 bg-white !pt-6 !pb-12 sm:!pt-8 sm:!pb-14">
       <SectionHeader
-        label="Get in Touch"
-        title="Contact"
-        description="Have an opportunity or project in mind? Send a message below."
+        label="Have a Project in Mind?"
+        title="Get in Touch"
+        description="Tell me what you're building, what you're trying to automate, or where you need help. I'll get back to you with the best way to move forward."
       />
 
       <div className="max-w-xl mx-auto mt-4">
@@ -103,7 +103,7 @@ export default function Contact() {
               <div>
                 <h3 className="text-title-sm font-bold text-black">Send a Message</h3>
                 <p className="text-xs text-neutral-500 mt-0.5">
-                  Fill in the details below to send me an email.
+                  Share what you're building or looking to automate and I'll get back to your email.
                 </p>
               </div>
 
