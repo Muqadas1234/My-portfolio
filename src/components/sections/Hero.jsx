@@ -95,12 +95,11 @@ export default function Hero() {
           </motion.h1>
 
           {/* Tagline Role */}
-          <motion.p
-            variants={itemVariants}
-            className="text-title-sm font-semibold text-black"
-          >
-            {personalInfo.title}
-          </motion.p>
+          <motion.div variants={itemVariants}>
+            <span className="inline-block rounded-full border border-neutral-300 bg-neutral-100 px-3.5 py-1 text-xs sm:text-sm font-semibold text-black tracking-wide">
+              {personalInfo.title}
+            </span>
+          </motion.div>
 
           {/* Main Headline */}
           <motion.h2
