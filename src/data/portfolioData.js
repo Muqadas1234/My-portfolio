@@ -29,9 +29,10 @@ import { TbBrandCpp } from 'react-icons/tb'
 
 export const personalInfo = {
   name: 'Muqadas Akram',
-  role: 'Fresh Computer Science Graduate',
-  title: 'Fresh Computer Science Graduate | Python Developer | Full Stack Developer | AI/ML Engineer',
-  subtitle: 'AI Engineer · Full-Stack Developer · Machine Learning',
+  role: 'AI Product Developer & Full-Stack Developer',
+  headline: 'Turning Ideas Into Intelligent Digital Products',
+  title: 'AI Product Developer & Full-Stack Developer',
+  subtitle: 'AI Product Developer & Full-Stack Developer',
   email: 'muqadasakram.13@gmail.com',
   phone: '+92 319 828 8490',
   github: 'https://github.com/Muqadas1234',
@@ -39,14 +40,13 @@ export const personalInfo = {
   location: 'Karachi, Sindh, Pakistan',
   heroImage: '/certificates/profile-image.png',
   aboutHome: [
-    'Fresh Computer Science graduate and Python Developer with expertise in Artificial Intelligence, Machine Learning, NLP, and Full-Stack Development. Skilled in building intelligent, scalable, and AI-driven applications using modern technologies and frameworks.',
-    'Experienced in international hackathons, programming competitions, and collaborative projects, with strong problem-solving, communication, and analytical skills.',
-    'Actively seeking full-time software development, full-stack developer, and AI/ML engineering internships or job opportunities. Open to both remote and on-site/hybrid roles.',
+    'Specializing in AI-powered applications, intelligent chatbots, AI agents, voice assistants, and full-stack web development, I build digital products that help businesses enhance their digital experiences, engage their users, and bring innovative ideas to life.',
+    'I combine modern software engineering with AI technologies to create intuitive, scalable, and impactful products — from polished user interfaces and robust backends to intelligent features that add meaningful value to businesses and their customers.',
   ],
   aboutShort:
-    'Fresh CS graduate skilled in AI, ML, NLP, and full-stack development. Experienced in international hackathons and actively seeking remote or on-site job and internship opportunities as a Full-Stack Developer or AI/ML Engineer.',
+    'Specializing in AI-powered applications, intelligent chatbots, AI agents, voice assistants, and full-stack web development, I build digital products that help businesses enhance their digital experiences, engage their users, and bring innovative ideas to life.',
   aboutLong:
-    'I am a fresh Computer Science graduate with expertise in AI, Machine Learning, NLP, and full-stack development. Having built robust platforms and competed in global hackathons, I am actively seeking full-time software engineering, full-stack development, or AI/ML internships and job opportunities — available for both remote and on-site/hybrid positions.',
+    'Specializing in AI-powered applications, intelligent chatbots, AI agents, voice assistants, and full-stack web development, I build digital products that help businesses enhance their digital experiences, engage their users, and bring innovative ideas to life. I combine modern software engineering with AI technologies to create intuitive, scalable, and impactful products — from polished user interfaces and robust backends to intelligent features that add meaningful value to businesses and their customers.',
   resumeUrl: '/Muqadas Akram Resume.pdf',
 }
 
