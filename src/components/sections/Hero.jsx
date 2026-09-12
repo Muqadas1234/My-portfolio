@@ -135,7 +135,7 @@ export default function Hero() {
           {/* CTA Action Buttons */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row items-start gap-3 pt-1"
+            className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2"
           >
             <button
               type="button"
@@ -143,7 +143,7 @@ export default function Hero() {
                 logClick('Explore_Portfolio_Hero', 'Explore Portfolio Click')
                 document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
               }}
-              className="btn-primary w-full sm:w-auto"
+              className="btn-primary w-full sm:w-auto text-center"
             >
               Explore Portfolio
             </button>
@@ -153,7 +153,7 @@ export default function Hero() {
                 logClick('Get_In_Touch_Hero', 'Get In Touch Click')
                 document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
               }}
-              className="btn-secondary w-full sm:w-auto"
+              className="btn-secondary w-full sm:w-auto text-center"
             >
               Get In Touch
             </button>
