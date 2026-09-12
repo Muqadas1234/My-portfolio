@@ -41,12 +41,12 @@ export const personalInfo = {
   heroImage: '/certificates/profile-image.png',
   aboutHome: [
     'Specializing in AI-powered applications, intelligent chatbots, AI agents, voice assistants, and full-stack web development, I build digital products that help businesses enhance their digital experiences, engage their users, and bring innovative ideas to life.',
-    'I combine modern software engineering with AI technologies to create intuitive, scalable, and impactful products — from polished user interfaces and robust backends to intelligent features that add meaningful value to businesses and their customers.',
+    'I combine modern software engineering with AI technologies to create intuitive, scalable, and impactful products, from polished user interfaces and robust backends to intelligent features that add meaningful value to businesses and their customers.',
   ],
   aboutShort:
     'Specializing in AI-powered applications, intelligent chatbots, AI agents, voice assistants, and full-stack web development, I build digital products that help businesses enhance their digital experiences, engage their users, and bring innovative ideas to life.',
   aboutLong:
-    'Specializing in AI-powered applications, intelligent chatbots, AI agents, voice assistants, and full-stack web development, I build digital products that help businesses enhance their digital experiences, engage their users, and bring innovative ideas to life. I combine modern software engineering with AI technologies to create intuitive, scalable, and impactful products — from polished user interfaces and robust backends to intelligent features that add meaningful value to businesses and their customers.',
+    'Specializing in AI-powered applications, intelligent chatbots, AI agents, voice assistants, and full-stack web development, I build digital products that help businesses enhance their digital experiences, engage their users, and bring innovative ideas to life. I combine modern software engineering with AI technologies to create intuitive, scalable, and impactful products, from polished user interfaces and robust backends to intelligent features that add meaningful value to businesses and their customers.',
   resumeUrl: '/Muqadas Akram Resume.pdf',
 }
 
