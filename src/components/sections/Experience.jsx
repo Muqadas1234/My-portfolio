@@ -74,9 +74,9 @@ export default function Experience() {
   return (
     <SectionWrapper id="experience" className="section-alt">
       <SectionHeader
-        label="Experience"
-        title="Work & Training"
-        description="Hands-on experience in Python education and applied machine learning."
+        label="Where I Have Worked"
+        title="Professional Experience"
+        description="Hands-on experience in software engineering, full-stack development, and applied machine learning."
       />
 
       <ul className="space-y-6 max-w-4xl mx-auto">
