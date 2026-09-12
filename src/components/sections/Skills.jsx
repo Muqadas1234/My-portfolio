@@ -6,9 +6,9 @@ export default function Skills() {
   return (
     <SectionWrapper id="skills" className="section-alt bg-gradient-to-br from-slate-50 via-white to-slate-50">
       <SectionHeader
-        label="Skills"
-        title="Technology Stack"
-        description="Tools and frameworks I use to build intelligent, production-ready applications."
+        label="Technologies I Work With"
+        title="Tech Stack & Tools"
+        description="Languages, frameworks, AI APIs, and developer tools I use to build scalable products."
       />
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">

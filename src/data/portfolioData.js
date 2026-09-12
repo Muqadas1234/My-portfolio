@@ -5,6 +5,7 @@ import {
   FaLinkedin,
   FaEnvelope,
   FaPhone,
+  FaMicrophone,
 } from 'react-icons/fa'
 import {
   SiTensorflow,
@@ -23,6 +24,13 @@ import {
   SiGooglecolab,
   SiNodedotjs,
   SiNextdotjs,
+  SiExpress,
+  SiMongodb,
+  SiTwilio,
+  SiOpenai,
+  SiMocha,
+  SiChai,
+  SiGithubactions,
 } from 'react-icons/si'
 import { VscVscode } from 'react-icons/vsc'
 import { TbBrandCpp } from 'react-icons/tb'
@@ -97,7 +105,7 @@ export const navLinks = [
   { id: 'home', label: 'About' },
   { id: 'education', label: 'Education' },
   { id: 'experience', label: 'Experience' },
-  { id: 'skills', label: 'Skills' },
+  { id: 'skills', label: 'Technologies' },
   { id: 'projects', label: 'Projects' },
   { id: 'certificates', label: 'Certificates' },
   { id: 'workflow', label: 'Workflow' },
@@ -359,56 +367,64 @@ export const education = {
 
 export const skillGroups = [
   {
-    category: 'Programming',
+    category: 'AI & Voice Technologies',
     skills: [
-      { name: 'Python', icon: FaPython },
-      { name: 'C++', icon: TbBrandCpp },
-      { name: 'JavaScript', icon: SiJavascript },
-    ],
-  },
-  {
-    category: 'AI/ML',
-    skills: [
+      { name: 'OpenAI API', icon: SiOpenai },
+      { name: 'Vapi API', icon: FaMicrophone },
+      { name: 'Twilio', icon: SiTwilio },
+      { name: 'RAG Systems', icon: null },
       { name: 'TensorFlow', icon: SiTensorflow },
       { name: 'PyTorch', icon: SiPytorch },
       { name: 'Scikit-learn', icon: SiScikitlearn },
-      { name: 'Keras', icon: SiKeras },
-      { name: 'NLP', icon: null },
-      { name: 'FAISS', icon: null },
-      { name: 'RAG Systems', icon: null },
+      { name: 'NLP & LLMs', icon: null },
     ],
   },
   {
-    category: 'Backend',
+    category: 'Full-Stack & Backend',
     skills: [
-      { name: 'Flask', icon: SiFlask },
-      { name: 'FastAPI', icon: SiFastapi },
       { name: 'Node.js', icon: SiNodedotjs },
+      { name: 'Express.js', icon: SiExpress },
+      { name: 'Next.js', icon: SiNextdotjs },
+      { name: 'FastAPI', icon: SiFastapi },
+      { name: 'Flask', icon: SiFlask },
       { name: 'REST APIs', icon: null },
     ],
   },
   {
-    category: 'Frontend',
+    category: 'Frontend Development',
     skills: [
       { name: 'React.js', icon: FaReact },
       { name: 'Next.js', icon: SiNextdotjs },
-      { name: 'HTML', icon: SiHtml5 },
-      { name: 'CSS', icon: SiCss },
+      { name: 'JavaScript', icon: SiJavascript },
       { name: 'Tailwind CSS', icon: SiTailwindcss },
+      { name: 'HTML5', icon: SiHtml5 },
+      { name: 'CSS3', icon: SiCss },
     ],
   },
   {
-    category: 'Databases',
+    category: 'Databases & Storage',
     skills: [
+      { name: 'MongoDB', icon: SiMongodb },
       { name: 'PostgreSQL', icon: SiPostgresql },
       { name: 'SQLite', icon: SiSqlite },
     ],
   },
   {
-    category: 'Tools',
+    category: 'Testing & DevOps',
     skills: [
+      { name: 'CI/CD', icon: SiGithubactions },
+      { name: 'Pino Logger', icon: null },
+      { name: 'Mocha & Chai', icon: SiMocha },
       { name: 'Git', icon: SiGit },
       { name: 'GitHub', icon: FaGithub },
+    ],
+  },
+  {
+    category: 'Languages & Tools',
+    skills: [
+      { name: 'Python', icon: FaPython },
+      { name: 'JavaScript', icon: SiJavascript },
+      { name: 'C++', icon: TbBrandCpp },
       { name: 'VS Code', icon: VscVscode },
       { name: 'Google Colab', icon: SiGooglecolab },
     ],
