@@ -76,7 +76,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="px-4 sm:px-6 lg:px-8 pt-28 pb-20 border-b border-neutral-200 overflow-hidden"
+      className="px-4 sm:px-6 lg:px-8 pt-20 sm:pt-22 lg:pt-24 pb-20 border-b border-neutral-200 overflow-hidden"
     >
       <motion.div
         variants={containerVariants}
