@@ -74,7 +74,7 @@ export default function Contact() {
       <SectionHeader
         label="Have a Project in Mind?"
         title="Get in Touch"
-        description="Tell me what you're building, what you're trying to automate, or where you need help. I'll get back to you with the best way to move forward."
+        description="Tell me about the product you're building, the AI features you'd like to integrate, or where you need full-stack expertise. I'll get back to you with the best way to bring your ideas to life."
       />
 
       <div className="max-w-xl mx-auto mt-4">
@@ -103,7 +103,7 @@ export default function Contact() {
               <div>
                 <h3 className="text-title-sm font-bold text-black">Send a Message</h3>
                 <p className="text-xs text-neutral-500 mt-0.5">
-                  Share what you're building or looking to automate and I'll get back to your email.
+                  Share your project details or requirements below and I'll get back to your email directly.
                 </p>
               </div>
 
