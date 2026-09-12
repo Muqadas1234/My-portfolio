@@ -76,19 +76,19 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="px-4 sm:px-6 lg:px-8 pt-28 pb-20 border-b border-neutral-200 overflow-hidden"
+      className="min-h-[calc(100vh-4rem)] lg:h-[calc(100vh-4rem)] flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20 pb-8 lg:pt-0 lg:pb-0 border-b border-neutral-200 overflow-hidden"
     >
       <motion.div
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[minmax(0,_1.2fr)_minmax(0,_0.9fr)]"
+        className="w-full max-w-6xl mx-auto grid items-center gap-6 lg:gap-10 lg:grid-cols-[minmax(0,_1.25fr)_minmax(0,_0.85fr)] py-2 lg:py-0"
       >
-        <div className="text-left space-y-6">
+        <div className="text-left space-y-4">
           {/* Greeting Typed Name */}
           <motion.h1
             variants={itemVariants}
-            className="text-display text-2xl xs:text-3xl sm:text-5xl lg:text-[3.5rem] min-h-[3rem] sm:min-h-[4rem] lg:min-h-[5rem] flex items-center whitespace-nowrap"
+            className="text-display text-2xl xs:text-3xl sm:text-4xl lg:text-4xl min-h-[2.5rem] flex items-center whitespace-nowrap"
           >
             <span>{typedText}</span>
             <span className="animate-pulse ml-1 text-neutral-400 font-light" style={{ animationDuration: '0.8s' }}>|</span>
@@ -96,7 +96,7 @@ export default function Hero() {
 
           {/* Tagline Role */}
           <motion.div variants={itemVariants}>
-            <span className="inline-block rounded-full border border-neutral-300 bg-neutral-100 px-3.5 py-1 text-xs sm:text-sm font-semibold text-black tracking-wide">
+            <span className="inline-block rounded-full border border-neutral-300 bg-neutral-100 px-3 py-0.5 text-xs sm:text-sm font-semibold text-black tracking-wide">
               {personalInfo.title}
             </span>
           </motion.div>
@@ -104,7 +104,7 @@ export default function Hero() {
           {/* Main Headline */}
           <motion.h2
             variants={itemVariants}
-            className="text-2xl sm:text-3xl font-bold text-neutral-900 tracking-tight leading-snug"
+            className="text-xl sm:text-2xl lg:text-[1.75rem] font-bold text-neutral-900 tracking-tight leading-snug"
           >
             Turning Ideas Into Intelligent Digital Products
           </motion.h2>
@@ -112,10 +112,10 @@ export default function Hero() {
           {/* Clean Description Paragraphs (Without Middle Bolding) */}
           <motion.div
             variants={itemVariants}
-            className="space-y-4 max-w-2xl"
+            className="space-y-2.5 max-w-2xl text-neutral-700 text-xs sm:text-sm leading-relaxed"
           >
             {personalInfo.aboutHome.map((paragraph) => (
-              <p key={paragraph.slice(0, 40)} className="text-body-sm text-justify">
+              <p key={paragraph.slice(0, 40)} className="text-justify">
                 {paragraph}
               </p>
             ))}
@@ -126,7 +126,7 @@ export default function Hero() {
             variants={itemVariants}
             className="flex justify-start"
           >
-            <p className="inline-flex items-center gap-2 text-body-sm font-medium text-black">
+            <p className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-medium text-black">
               <HiLocationMarker className="flex-shrink-0" aria-hidden="true" />
               {personalInfo.location}
             </p>
@@ -135,7 +135,7 @@ export default function Hero() {
           {/* CTA Action Buttons */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2"
+            className="flex flex-row items-center gap-3 pt-1"
           >
             <button
               type="button"
@@ -143,7 +143,7 @@ export default function Hero() {
                 logClick('Explore_Portfolio_Hero', 'Explore Portfolio Click')
                 document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
               }}
-              className="btn-primary w-full sm:w-auto text-center"
+              className="btn-primary py-2 px-5 text-xs sm:text-sm text-center"
             >
               Explore Portfolio
             </button>
@@ -153,7 +153,7 @@ export default function Hero() {
                 logClick('Get_In_Touch_Hero', 'Get In Touch Click')
                 document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
               }}
-              className="btn-secondary w-full sm:w-auto text-center"
+              className="btn-secondary py-2 px-5 text-xs sm:text-sm text-center"
             >
               Get In Touch
             </button>
@@ -164,11 +164,11 @@ export default function Hero() {
           variants={imageVariants}
           className="flex items-center justify-center"
         >
-          <div className="overflow-hidden rounded-[2rem] border border-neutral-200 bg-neutral-100 shadow-sm">
+          <div className="overflow-hidden rounded-[2rem] border border-neutral-200 bg-neutral-100 shadow-sm max-w-[240px] sm:max-w-[280px] lg:max-w-[320px] aspect-square mx-auto">
             <img
               src={personalInfo.heroImage}
               alt={`${personalInfo.name} profile`}
-              className="h-full w-full max-w-sm object-cover"
+              className="h-full w-full object-cover"
             />
           </div>
         </motion.div>
