@@ -7,7 +7,6 @@ export default function Skills() {
     <SectionWrapper id="skills" className="section-alt bg-gradient-to-br from-slate-50 via-white to-slate-50">
       <SectionHeader
         label="Technologies I Work With"
-        title="Tech Stack & Tools"
         description="Languages, frameworks, AI APIs, and developer tools I use to build scalable products."
       />
 

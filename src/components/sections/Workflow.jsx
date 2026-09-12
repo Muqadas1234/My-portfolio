@@ -39,7 +39,6 @@ export default function Workflow() {
     <SectionWrapper id="workflow" className="border-t border-neutral-200 bg-white py-16 sm:py-20 overflow-hidden">
       <div className="text-center mb-10 sm:mb-12">
         <p className="text-3xl sm:text-4xl font-extrabold text-black mb-2">How I Build</p>
-        <h2 className="text-xs sm:text-sm font-semibold text-neutral-500 uppercase tracking-widest">My Engineering Workflow</h2>
         <p className="text-sm sm:text-base mt-4 max-w-2xl mx-auto text-neutral-600">
           A structured, rigorous methodology focused on transforming complex business problems into production-ready software solutions.
         </p>
