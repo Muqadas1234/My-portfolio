@@ -46,7 +46,7 @@ export const personalInfo = {
   github: 'https://github.com/Muqadas1234',
   linkedin: 'https://www.linkedin.com/in/muqadas-akram/',
   location: 'Karachi, Sindh, Pakistan',
-  heroImage: '/certificates/profile-image.png',
+  heroImage: '/certificates/my-image.jpeg',
   aboutHome: [
     'Specializing in AI-powered applications, intelligent chatbots, AI agents, voice assistants, and full-stack web development, I build digital products that help businesses enhance their digital experiences, engage their users, and bring innovative ideas to life.',
     'I combine modern software engineering with AI technologies to create intuitive, scalable, and impactful products, from polished user interfaces and robust backends to intelligent features that add meaningful value to businesses and their customers.',
